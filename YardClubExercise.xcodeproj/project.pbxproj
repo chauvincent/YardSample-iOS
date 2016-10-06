@@ -130,9 +130,9 @@
 		7575E4DD1DA5E2DD00F2F0DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */,
-				750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */,
 				750541411DA5B59400A94872 /* RequestViewController.swift */,
+				750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */,
+				7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */,
 				7575E4D91DA5E2C100F2F0DC /* MyYardViewController.swift */,
 			);
 			name = Controller;
