@@ -32,19 +32,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     
     func setupNav()
     {
+        let YELLOW_COLOR = UIColor(red: 255.0, green: 194.0, blue: 14.0, alpha: 1.0)
         let font = UIFont (name: "OpenSans-Bold", size: 16)!
         UINavigationBar.appearance().barTintColor = UIColor.black
-        UINavigationBar.appearance().tintColor = UIColor.yellow
+        UINavigationBar.appearance().tintColor = YELLOW_COLOR
         UINavigationBar.appearance().titleTextAttributes =
             [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor.white]
     }
 
     func setupTabBar()
     {
+        let YELLOW_COLOR = UIColor(red: 255.0, green: 194.0, blue: 14.0, alpha: 1.0)
         UITabBar.appearance().barTintColor = UIColor.black
-        UITabBar.appearance().tintColor = UIColor.yellow
+        UITabBar.appearance().tintColor = YELLOW_COLOR
         UITabBarItem.appearance().setTitleTextAttributes(
             [NSForegroundColorAttributeName : UIColor.white], for: UIControlState.normal)
+        
     }
 }
 

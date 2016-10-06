@@ -13,8 +13,8 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
     
     var controllerTitles = ["REQUEST EQUIPMENT", "ACTIVE RENTAL", "OPEN REQUESTS", "MY YARD"]
     var tabBarTitles = ["REQUEST\nEQUIPMENT", "ACTIVE\nRENTAL", "OPEN\nREQUESTS", "MY YARD"]
-    
     var allLabels: [UILabel] = []
+    var allHairline: [UIView] = []
     
     override func viewDidLoad()
     {
@@ -59,37 +59,74 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
         
         for (index, element) in self.tabBarTitles.enumerated()
         {
+            // Set Up Bar Item Container
             let originX = CGFloat(index) * labelWidth
-            let label = UILabel(frame: CGRect(x: originX, y: originY, width: labelWidth, height: labelSize))
-            self.view.addSubview(label)
+            let containerView = UIView(frame: CGRect(x: originX, y: originY, width: labelWidth, height: labelSize))
+            containerView.backgroundColor = UIColor.clear
+            self.view.addSubview(containerView)
+            containerView.isUserInteractionEnabled = false
+            
+            // Set Up Label For Tab Bar Item
+            let label = UILabel(frame: .zero)
+            containerView.addSubview(label)
             label.text = element
             label.numberOfLines = 2
             label.textColor = UIColor.white
-            label.font = UIFont (name: "Helvetica Neue", size: 10)
+            label.font = UIFont (name: "OpenSans-Bold", size: 11)!
             label.textAlignment = .center
             label.adjustsFontSizeToFitWidth = true
             label.minimumScaleFactor = 0.5
+            label.sizeToFit()
             label.translatesAutoresizingMaskIntoConstraints = false
+            
+            // Label Constraints
+            label.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
+            label.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+            
+            // Add Hairline
+            let underlineWidth = label.intrinsicContentSize.width
+            let underlineView = UIView()
+            underlineView.backgroundColor = YELLOW_COLOR
+            label.addSubview(underlineView)
+            underlineView.translatesAutoresizingMaskIntoConstraints = false;            
+            underlineView.heightAnchor.constraint(equalToConstant: 3.0).isActive = true
+            underlineView.bottomAnchor.constraint(equalTo: label.bottomAnchor, constant: 2.0).isActive = true
+            underlineView.widthAnchor.constraint(equalToConstant:underlineWidth).isActive = true
+            underlineView.centerXAnchor.constraint(equalTo: label.centerXAnchor).isActive = true
+            
+            self.allHairline.append(underlineView)
             self.allLabels.append(label)
         }
+        setSelected(index: 0)
+        
     }
     
 // MARK: - <UITabBarControllerDelegate>
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController)
     {
+        setSelected(index: self.selectedIndex)
+    }
+
+// MARK: - Helpers
+    
+    func setSelected(index: Int)
+    {
         for (index, label) in self.allLabels.enumerated()
         {
             if index == selectedIndex
             {
-                label.textColor = UIColor.yellow
+                label.textColor = YELLOW_COLOR
+                self.allHairline[index].isHidden = false
             }
             else
             {
                 label.textColor = UIColor.white
+                self.allHairline[index].isHidden = true
             }
         }
     }
-
     
+    
+
 }
