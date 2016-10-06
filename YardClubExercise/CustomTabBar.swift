@@ -13,25 +13,25 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
     
     var controllerTitles = ["REQUEST EQUIPMENT", "ACTIVE RENTAL", "OPEN REQUESTS", "MY YARD"]
     var tabBarTitles = ["REQUEST\nEQUIPMENT", "ACTIVE\nRENTAL", "OPEN\nREQUESTS", "MY YARD"]
+    
     var allLabels: [UILabel] = []
     var allHairline: [UIView] = []
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         setupView()
         setupControllers()
         setupLabels()
-    
     }
     
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-
     }
 
+// MARK: - View Setup
+    
     func setupView()
     {
         self.tabBar.backgroundColor = UIColor.black
@@ -63,8 +63,8 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
             let originX = CGFloat(index) * labelWidth
             let containerView = UIView(frame: CGRect(x: originX, y: originY, width: labelWidth, height: labelSize))
             containerView.backgroundColor = UIColor.clear
-            self.view.addSubview(containerView)
             containerView.isUserInteractionEnabled = false
+            self.view.addSubview(containerView)
             
             // Set Up Label For Tab Bar Item
             let label = UILabel(frame: .zero)
@@ -84,13 +84,15 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
             label.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
             
             // Add Hairline
-            let underlineWidth = label.intrinsicContentSize.width
-            let underlineView = UIView()
+            let underlineWidth = CGFloat(Int(label.intrinsicContentSize.width))
+            let underlineView = UIView(frame: .zero)
             underlineView.backgroundColor = YELLOW_COLOR
             label.addSubview(underlineView)
-            underlineView.translatesAutoresizingMaskIntoConstraints = false;            
-            underlineView.heightAnchor.constraint(equalToConstant: 3.0).isActive = true
-            underlineView.bottomAnchor.constraint(equalTo: label.bottomAnchor, constant: 2.0).isActive = true
+            underlineView.translatesAutoresizingMaskIntoConstraints = false;
+            
+            // Hairline Constraints
+            underlineView.heightAnchor.constraint(equalToConstant: CGFloat(2.5)).isActive = true
+            underlineView.bottomAnchor.constraint(equalTo: label.bottomAnchor, constant: 3).isActive = true
             underlineView.widthAnchor.constraint(equalToConstant:underlineWidth).isActive = true
             underlineView.centerXAnchor.constraint(equalTo: label.centerXAnchor).isActive = true
             
@@ -118,6 +120,7 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
             {
                 label.textColor = YELLOW_COLOR
                 self.allHairline[index].isHidden = false
+                navigationItem.title = "\(controllerTitles[index])"
             }
             else
             {

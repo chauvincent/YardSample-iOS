@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate
 {
-    
+    var nav: UINavigationController?
     var tabBarController: CustomTabBar?
     var window: UIWindow?
 
@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Set CustomTabBar as RootViewController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.tabBarController = CustomTabBar()
-        let nav = UINavigationController(rootViewController: self.tabBarController!)
-        self.window!.rootViewController = nav
+        self.nav = UINavigationController(rootViewController: self.tabBarController!)
+        self.window!.rootViewController = self.nav
         self.window?.makeKeyAndVisible()
         
         return true
@@ -32,17 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     
     func setupNav()
     {
-        let YELLOW_COLOR = UIColor(red: 255.0, green: 194.0, blue: 14.0, alpha: 1.0)
         let font = UIFont (name: "OpenSans-Bold", size: 16)!
         UINavigationBar.appearance().barTintColor = UIColor.black
         UINavigationBar.appearance().tintColor = YELLOW_COLOR
         UINavigationBar.appearance().titleTextAttributes =
             [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor.white]
+        
     }
 
     func setupTabBar()
     {
-        let YELLOW_COLOR = UIColor(red: 255.0, green: 194.0, blue: 14.0, alpha: 1.0)
         UITabBar.appearance().barTintColor = UIColor.black
         UITabBar.appearance().tintColor = YELLOW_COLOR
         UITabBarItem.appearance().setTitleTextAttributes(
