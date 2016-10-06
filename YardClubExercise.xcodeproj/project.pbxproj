@@ -16,7 +16,9 @@
 		750541441DA5C2BB00A94872 /* ActiveRentalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */; };
 		7575E4D81DA5E2B500F2F0DC /* OpenRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */; };
 		7575E4DA1DA5E2C100F2F0DC /* MyYardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4D91DA5E2C100F2F0DC /* MyYardViewController.swift */; };
-		7575E4E01DA6302000F2F0DC /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4DF1DA6302000F2F0DC /* CustomTabBarController.swift */; };
+		7575E4E01DA6302000F2F0DC /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4DF1DA6302000F2F0DC /* CustomTabBar.swift */; };
+		7575E4E41DA6522D00F2F0DC /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7575E4E21DA6522D00F2F0DC /* OpenSans-Bold.ttf */; };
+		7575E4E51DA6522D00F2F0DC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7575E4E31DA6522D00F2F0DC /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,9 @@
 		750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveRentalViewController.swift; sourceTree = "<group>"; };
 		7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRequestViewController.swift; sourceTree = "<group>"; };
 		7575E4D91DA5E2C100F2F0DC /* MyYardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyYardViewController.swift; sourceTree = "<group>"; };
-		7575E4DF1DA6302000F2F0DC /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		7575E4DF1DA6302000F2F0DC /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		7575E4E21DA6522D00F2F0DC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		7575E4E31DA6522D00F2F0DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				750541201DA5B54900A94872 /* YardClubExercise */,
+				7575E4E11DA6520A00F2F0DC /* Fonts */,
 				750541351DA5B54900A94872 /* YardClubExerciseTests */,
 				7505411F1DA5B54900A94872 /* Products */,
 			);
@@ -115,7 +120,7 @@
 		7575E4DC1DA5E2D100F2F0DC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7575E4DF1DA6302000F2F0DC /* CustomTabBarController.swift */,
+				7575E4DF1DA6302000F2F0DC /* CustomTabBar.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -138,6 +143,16 @@
 				7505412D1DA5B54900A94872 /* Info.plist */,
 			);
 			name = "App Global";
+			sourceTree = "<group>";
+		};
+		7575E4E11DA6520A00F2F0DC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7575E4E21DA6522D00F2F0DC /* OpenSans-Bold.ttf */,
+				7575E4E31DA6522D00F2F0DC /* OpenSans-Regular.ttf */,
+			);
+			name = Fonts;
+			path = YardClubExercise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +238,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7575E4E51DA6522D00F2F0DC /* OpenSans-Regular.ttf in Resources */,
 				7505412C1DA5B54900A94872 /* LaunchScreen.storyboard in Resources */,
 				750541291DA5B54900A94872 /* Assets.xcassets in Resources */,
+				7575E4E41DA6522D00F2F0DC /* OpenSans-Bold.ttf in Resources */,
 				750541271DA5B54900A94872 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +262,7 @@
 			files = (
 				7575E4D81DA5E2B500F2F0DC /* OpenRequestViewController.swift in Sources */,
 				750541221DA5B54900A94872 /* AppDelegate.swift in Sources */,
-				7575E4E01DA6302000F2F0DC /* CustomTabBarController.swift in Sources */,
+				7575E4E01DA6302000F2F0DC /* CustomTabBar.swift in Sources */,
 				750541421DA5B59400A94872 /* RequestViewController.swift in Sources */,
 				7575E4DA1DA5E2C100F2F0DC /* MyYardViewController.swift in Sources */,
 				750541441DA5C2BB00A94872 /* ActiveRentalViewController.swift in Sources */,

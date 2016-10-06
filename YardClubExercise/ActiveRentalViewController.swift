@@ -15,7 +15,7 @@ class ActiveRentalViewController: UIViewController {
         
 
         self.view.backgroundColor = UIColor.blue
-        self.navigationItem.title = "YourTitle"
+     
         // Do any additional setup after loading the view.
     }
 

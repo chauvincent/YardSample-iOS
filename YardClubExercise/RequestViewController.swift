@@ -27,7 +27,7 @@ class RequestViewController: UIViewController
     func setupView()
     {
         self.view.backgroundColor = UIColor.red
-        self.navigationItem.title = "YourTitle"
+     
     }
 
     /*

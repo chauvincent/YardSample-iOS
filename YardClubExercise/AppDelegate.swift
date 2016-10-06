@@ -12,48 +12,39 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate
 {
     
-    var tabBarController: CustomTabBarController?
-
+    var tabBarController: CustomTabBar?
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-        self.setupTabBar()
-        self.setupNav()
+        setupTabBar()
+        setupNav()
+  
+        // Set CustomTabBar as RootViewController
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.tabBarController = CustomTabBar()
+        let nav = UINavigationController(rootViewController: self.tabBarController!)
+        self.window!.rootViewController = nav
+        self.window?.makeKeyAndVisible()
         
         return true
     }
     
     func setupNav()
     {
+        let font = UIFont (name: "OpenSans-Bold", size: 16)!
         UINavigationBar.appearance().barTintColor = UIColor.black
         UINavigationBar.appearance().tintColor = UIColor.yellow
-
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 20), NSForegroundColorAttributeName : UIColor.white]
-
+        UINavigationBar.appearance().titleTextAttributes =
+            [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor.white]
     }
 
     func setupTabBar()
     {
-        
-        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName : UIFont.systemFont(ofSize: 16), NSForegroundColorAttributeName : UIColor.white], for: UIControlState.normal)
         UITabBar.appearance().barTintColor = UIColor.black
         UITabBar.appearance().tintColor = UIColor.yellow
-        
-        //UIBarButtonItem.appearance().setTitlePositionAdjustment(UIOffset(horizontal: 0.0, vertical: 30), for: UIBarMetrics.default)
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.tabBarController = CustomTabBarController()
-        self.tabBarController?.delegate = self
-
-        self.window!.rootViewController = self.tabBarController
-        self.window?.makeKeyAndVisible()
-     
-
-    }
-
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("didSelectViewController: \(viewController.title) ?")
+        UITabBarItem.appearance().setTitleTextAttributes(
+            [NSForegroundColorAttributeName : UIColor.white], for: UIControlState.normal)
     }
 }
 
