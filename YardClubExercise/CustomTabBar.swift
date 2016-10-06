@@ -36,6 +36,29 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
     {
         self.tabBar.backgroundColor = UIColor.black
         self.delegate = self
+        
+        // Setup Navigation Bar Items
+        let callBarButton = UIButton()
+        callBarButton.setImage(UIImage(named: "call")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        callBarButton.tintColor = YELLOW_COLOR
+        callBarButton.frame = CGRect(x: 0, y: 0, width: 40.0, height: 40.0)
+        callBarButton.imageEdgeInsets = UIEdgeInsetsMake(0.0, 20, 0, 0)
+        
+        let rightBarButton = UIBarButtonItem()
+        rightBarButton.customView = callBarButton
+        self.navigationItem.rightBarButtonItem = rightBarButton
+    
+        let menuBarButton = UIButton()
+        menuBarButton.setImage(UIImage(named: "menu_btn")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        menuBarButton.tintColor = YELLOW_COLOR
+        menuBarButton.frame = CGRect(x: 0, y: 0, width: 40.0, height: 40.0)
+        menuBarButton.imageEdgeInsets = UIEdgeInsetsMake(0.0, -20, 0, 0);
+        
+        let leftBarButtonItem = UIBarButtonItem()
+        leftBarButtonItem.customView = menuBarButton
+        self.navigationItem.leftBarButtonItem = leftBarButtonItem
+        
+        
     }
     
     func setupControllers()
@@ -129,7 +152,5 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
             }
         }
     }
-    
-    
 
 }
