@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		750541221DA5B54900A94872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750541211DA5B54900A94872 /* AppDelegate.swift */; };
+		750541271DA5B54900A94872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750541251DA5B54900A94872 /* Main.storyboard */; };
+		750541291DA5B54900A94872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750541281DA5B54900A94872 /* Assets.xcassets */; };
+		7505412C1DA5B54900A94872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7505412A1DA5B54900A94872 /* LaunchScreen.storyboard */; };
+		750541371DA5B54900A94872 /* YardClubExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750541361DA5B54900A94872 /* YardClubExerciseTests.swift */; };
+		750541421DA5B59400A94872 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750541411DA5B59400A94872 /* RequestViewController.swift */; };
+		750541441DA5C2BB00A94872 /* ActiveRentalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */; };
+		7575E4D81DA5E2B500F2F0DC /* OpenRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */; };
+		7575E4DA1DA5E2C100F2F0DC /* MyYardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4D91DA5E2C100F2F0DC /* MyYardViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		750541331DA5B54900A94872 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 750541161DA5B54800A94872 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7505411D1DA5B54800A94872;
+			remoteInfo = YardClubExercise;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7505411E1DA5B54900A94872 /* YardClubExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YardClubExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		750541211DA5B54900A94872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		750541261DA5B54900A94872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		750541281DA5B54900A94872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7505412B1DA5B54900A94872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7505412D1DA5B54900A94872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		750541321DA5B54900A94872 /* YardClubExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YardClubExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		750541361DA5B54900A94872 /* YardClubExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YardClubExerciseTests.swift; sourceTree = "<group>"; };
+		750541381DA5B54900A94872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		750541411DA5B59400A94872 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveRentalViewController.swift; sourceTree = "<group>"; };
+		7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRequestViewController.swift; sourceTree = "<group>"; };
+		7575E4D91DA5E2C100F2F0DC /* MyYardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyYardViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7505411B1DA5B54800A94872 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7505412F1DA5B54900A94872 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		750541151DA5B54800A94872 = {
+			isa = PBXGroup;
+			children = (
+				750541201DA5B54900A94872 /* YardClubExercise */,
+				750541351DA5B54900A94872 /* YardClubExerciseTests */,
+				7505411F1DA5B54900A94872 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7505411F1DA5B54900A94872 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7505411E1DA5B54900A94872 /* YardClubExercise.app */,
+				750541321DA5B54900A94872 /* YardClubExerciseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		750541201DA5B54900A94872 /* YardClubExercise */ = {
+			isa = PBXGroup;
+			children = (
+				7575E4DE1DA5E2EF00F2F0DC /* App Global */,
+				7575E4DB1DA5E2C900F2F0DC /* Model */,
+				7575E4DC1DA5E2D100F2F0DC /* View */,
+				7575E4DD1DA5E2DD00F2F0DC /* Controller */,
+				750541251DA5B54900A94872 /* Main.storyboard */,
+				750541281DA5B54900A94872 /* Assets.xcassets */,
+				7505412A1DA5B54900A94872 /* LaunchScreen.storyboard */,
+			);
+			path = YardClubExercise;
+			sourceTree = "<group>";
+		};
+		750541351DA5B54900A94872 /* YardClubExerciseTests */ = {
+			isa = PBXGroup;
+			children = (
+				750541361DA5B54900A94872 /* YardClubExerciseTests.swift */,
+				750541381DA5B54900A94872 /* Info.plist */,
+			);
+			path = YardClubExerciseTests;
+			sourceTree = "<group>";
+		};
+		7575E4DB1DA5E2C900F2F0DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7575E4DC1DA5E2D100F2F0DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7575E4DD1DA5E2DD00F2F0DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */,
+				750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */,
+				750541411DA5B59400A94872 /* RequestViewController.swift */,
+				7575E4D91DA5E2C100F2F0DC /* MyYardViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7575E4DE1DA5E2EF00F2F0DC /* App Global */ = {
+			isa = PBXGroup;
+			children = (
+				750541211DA5B54900A94872 /* AppDelegate.swift */,
+				7505412D1DA5B54900A94872 /* Info.plist */,
+			);
+			name = "App Global";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7505411D1DA5B54800A94872 /* YardClubExercise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7505413B1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardClubExercise" */;
+			buildPhases = (
+				7505411A1DA5B54800A94872 /* Sources */,
+				7505411B1DA5B54800A94872 /* Frameworks */,
+				7505411C1DA5B54800A94872 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YardClubExercise;
+			productName = YardClubExercise;
+			productReference = 7505411E1DA5B54900A94872 /* YardClubExercise.app */;
+			productType = "com.apple.product-type.application";
+		};
+		750541311DA5B54900A94872 /* YardClubExerciseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7505413E1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardClubExerciseTests" */;
+			buildPhases = (
+				7505412E1DA5B54900A94872 /* Sources */,
+				7505412F1DA5B54900A94872 /* Frameworks */,
+				750541301DA5B54900A94872 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				750541341DA5B54900A94872 /* PBXTargetDependency */,
+			);
+			name = YardClubExerciseTests;
+			productName = YardClubExerciseTests;
+			productReference = 750541321DA5B54900A94872 /* YardClubExerciseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		750541161DA5B54800A94872 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Vincent Chau";
+				TargetAttributes = {
+					7505411D1DA5B54800A94872 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					750541311DA5B54900A94872 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7505411D1DA5B54800A94872;
+					};
+				};
+			};
+			buildConfigurationList = 750541191DA5B54800A94872 /* Build configuration list for PBXProject "YardClubExercise" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 750541151DA5B54800A94872;
+			productRefGroup = 7505411F1DA5B54900A94872 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7505411D1DA5B54800A94872 /* YardClubExercise */,
+				750541311DA5B54900A94872 /* YardClubExerciseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7505411C1DA5B54800A94872 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7505412C1DA5B54900A94872 /* LaunchScreen.storyboard in Resources */,
+				750541291DA5B54900A94872 /* Assets.xcassets in Resources */,
+				750541271DA5B54900A94872 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750541301DA5B54900A94872 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7505411A1DA5B54800A94872 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7575E4D81DA5E2B500F2F0DC /* OpenRequestViewController.swift in Sources */,
+				750541221DA5B54900A94872 /* AppDelegate.swift in Sources */,
+				750541421DA5B59400A94872 /* RequestViewController.swift in Sources */,
+				7575E4DA1DA5E2C100F2F0DC /* MyYardViewController.swift in Sources */,
+				750541441DA5C2BB00A94872 /* ActiveRentalViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7505412E1DA5B54900A94872 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750541371DA5B54900A94872 /* YardClubExerciseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		750541341DA5B54900A94872 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7505411D1DA5B54800A94872 /* YardClubExercise */;
+			targetProxy = 750541331DA5B54900A94872 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		750541251DA5B54900A94872 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				750541261DA5B54900A94872 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7505412A1DA5B54900A94872 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7505412B1DA5B54900A94872 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		750541391DA5B54900A94872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7505413A1DA5B54900A94872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7505413C1DA5B54900A94872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YardClubExercise/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardClubExercise";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7505413D1DA5B54900A94872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YardClubExercise/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardClubExercise";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7505413F1DA5B54900A94872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YardClubExerciseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardClubExerciseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YardClubExercise.app/YardClubExercise";
+			};
+			name = Debug;
+		};
+		750541401DA5B54900A94872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YardClubExerciseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardClubExerciseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YardClubExercise.app/YardClubExercise";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		750541191DA5B54800A94872 /* Build configuration list for PBXProject "YardClubExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				750541391DA5B54900A94872 /* Debug */,
+				7505413A1DA5B54900A94872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7505413B1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardClubExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7505413C1DA5B54900A94872 /* Debug */,
+				7505413D1DA5B54900A94872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7505413E1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardClubExerciseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7505413F1DA5B54900A94872 /* Debug */,
+				750541401DA5B54900A94872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 750541161DA5B54800A94872 /* Project object */;
+}
