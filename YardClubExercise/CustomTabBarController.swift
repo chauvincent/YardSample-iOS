@@ -10,7 +10,7 @@ import UIKit
 
 class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
 
-    var tabItems = ["REQUEST\nEQUIPTMENT", "ACTIVE\nRENTAL", "OPEN\nREQUESTS", "MY YARD"]
+    var tabItems = ["REQUEST\nEQUIPMENT", "ACTIVE\nRENTAL", "OPEN\nREQUESTS", "MY YARD"]
     var allLabels: [UILabel] = []
     
     override func viewDidLoad()
@@ -48,13 +48,14 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     func setupLabels()
     {
         let windowBounds = UIScreen.main.bounds
-        let originY = windowBounds.size.height - 32.0
+        let labelSize = self.tabBar.frame.size.height
+        let originY = windowBounds.size.height - labelSize
         let labelWidth = windowBounds.size.width / CGFloat(tabItems.count)
         
         for (index, element) in self.tabItems.enumerated()
         {
             let originX = CGFloat(index) * labelWidth
-            let label = UILabel(frame: CGRect(x: originX, y: originY, width: labelWidth, height: 32.0))
+            let label = UILabel(frame: CGRect(x: originX, y: originY, width: labelWidth, height: labelSize))
             label.text = element
             label.numberOfLines = 2
             label.textColor = UIColor.white
@@ -63,6 +64,7 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
             label.adjustsFontSizeToFitWidth = true
             label.minimumScaleFactor = 0.5
             self.view.addSubview(label)
+            label.translatesAutoresizingMaskIntoConstraints = false
         }
 
     }
