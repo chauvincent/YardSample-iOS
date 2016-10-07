@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,6 +26,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  CHOOSE A RENTAL STORE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSM-xR-IPo">
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="dfj-OY-Jc5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   FEATURED EQUIPMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCT-6J-OYa">
                                 <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -39,15 +49,52 @@
                                     <segue destination="OV0-Gi-lUn" kind="embed" id="OBr-LE-1eZ"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  CHOOSE A RENTAL STORE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSM-xR-IPo">
-                                <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2P-CN-mYg">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-bY-8os">
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-IV-7vz">
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-cat" translatesAutoresizingMaskIntoConstraints="NO" id="vKF-Oa-lv5"/>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="vKF-Oa-lv5" firstAttribute="top" secondItem="eLk-IV-7vz" secondAttribute="top" constant="13" id="1ql-5Y-uI8"/>
+                                                    <constraint firstItem="vKF-Oa-lv5" firstAttribute="leading" secondItem="eLk-IV-7vz" secondAttribute="leading" constant="25" id="5zw-Qm-OnS"/>
+                                                    <constraint firstItem="vKF-Oa-lv5" firstAttribute="centerY" secondItem="eLk-IV-7vz" secondAttribute="centerY" constant="-1" id="cQS-8s-2Pd"/>
+                                                    <constraint firstItem="vKF-Oa-lv5" firstAttribute="centerX" secondItem="eLk-IV-7vz" secondAttribute="centerX" constant="-2" id="vOu-ba-rLu"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjU-cj-4At">
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-yard-club" translatesAutoresizingMaskIntoConstraints="NO" id="zlf-36-nBq"/>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="zlf-36-nBq" firstAttribute="centerY" secondItem="HjU-cj-4At" secondAttribute="centerY" constant="-1" id="01c-fg-wtG"/>
+                                                    <constraint firstItem="zlf-36-nBq" firstAttribute="centerX" secondItem="HjU-cj-4At" secondAttribute="centerX" constant="-2" id="2CE-tD-9bo"/>
+                                                    <constraint firstItem="zlf-36-nBq" firstAttribute="top" secondItem="HjU-cj-4At" secondAttribute="top" constant="13" id="31j-ep-Mqg"/>
+                                                    <constraint firstAttribute="width" constant="165" id="dZy-gC-eFp"/>
+                                                    <constraint firstItem="zlf-36-nBq" firstAttribute="leading" secondItem="HjU-cj-4At" secondAttribute="leading" constant="25" id="eia-hG-XRN"/>
+                                                    <constraint firstAttribute="height" constant="103" id="rkb-d2-pgp"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="eLk-IV-7vz" firstAttribute="width" secondItem="HjU-cj-4At" secondAttribute="height" multiplier="165:103" id="aIH-jC-dqn"/>
+                                            <constraint firstItem="eLk-IV-7vz" firstAttribute="height" secondItem="HjU-cj-4At" secondAttribute="height" id="fSa-31-BtI"/>
+                                            <constraint firstItem="eLk-IV-7vz" firstAttribute="width" secondItem="HjU-cj-4At" secondAttribute="width" id="zXy-2B-rOp"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="dfj-OY-Jc5"/>
+                                    <constraint firstItem="CLt-bY-8os" firstAttribute="centerX" secondItem="G2P-CN-mYg" secondAttribute="centerX" id="633-uE-RR9"/>
+                                    <constraint firstAttribute="trailing" secondItem="CLt-bY-8os" secondAttribute="trailing" constant="18" id="CO5-XR-Bur"/>
+                                    <constraint firstItem="CLt-bY-8os" firstAttribute="top" secondItem="G2P-CN-mYg" secondAttribute="top" constant="14" id="QP5-ej-Sal"/>
+                                    <constraint firstItem="CLt-bY-8os" firstAttribute="leading" secondItem="G2P-CN-mYg" secondAttribute="leading" constant="17" id="S9b-HI-ejt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -60,6 +107,10 @@
                             <constraint firstItem="L5v-7E-JxV" firstAttribute="bottom" secondItem="NbA-SH-dy2" secondAttribute="top" id="QBY-0r-1MG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FCT-6J-OYa" secondAttribute="trailing" constant="-16" id="gGU-Mz-dPT"/>
                             <constraint firstItem="JSM-xR-IPo" firstAttribute="top" secondItem="pq3-4r-JPZ" secondAttribute="bottom" id="kps-k9-ioX"/>
+                            <constraint firstItem="G2P-CN-mYg" firstAttribute="top" secondItem="pq3-4r-JPZ" secondAttribute="bottom" constant="22" id="lql-pI-JYc"/>
+                            <constraint firstItem="G2P-CN-mYg" firstAttribute="trailing" secondItem="FCT-6J-OYa" secondAttribute="trailing" id="nOC-cD-336"/>
+                            <constraint firstItem="G2P-CN-mYg" firstAttribute="leading" secondItem="JSM-xR-IPo" secondAttribute="leading" id="rFR-VR-8MX"/>
+                            <constraint firstItem="FCT-6J-OYa" firstAttribute="top" secondItem="G2P-CN-mYg" secondAttribute="bottom" id="rHF-hg-pKI"/>
                             <constraint firstItem="JSM-xR-IPo" firstAttribute="leading" secondItem="iLI-Y3-NPc" secondAttribute="leading" id="sZN-Zv-6mw"/>
                             <constraint firstItem="L5v-7E-JxV" firstAttribute="top" secondItem="FCT-6J-OYa" secondAttribute="bottom" id="uBB-VR-ADl"/>
                         </constraints>
@@ -80,7 +131,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wj-NR-pGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-453" y="-131"/>
+            <point key="canvasLocation" x="-350" y="-184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo-cat" width="200" height="141"/>
+        <image name="logo-yard-club" width="217" height="46"/>
+    </resources>
 </document>
