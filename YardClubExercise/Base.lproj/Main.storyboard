@@ -1,8 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="naR-EU-WXk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Request View Controller-->
+        <scene sceneID="dmq-ck-cnU">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6M-kl-8eR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="RequestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="naR-EU-WXk" customClass="RequestViewController" customModule="YardClubExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pq3-4r-JPZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="NbA-SH-dy2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iLI-Y3-NPc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   FEATURED EQUIPMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCT-6J-OYa">
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Eb9-9r-vfO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5v-7E-JxV">
+                                <connections>
+                                    <segue destination="OV0-Gi-lUn" kind="embed" id="OBr-LE-1eZ"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  CHOOSE A RENTAL STORE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSM-xR-IPo">
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="dfj-OY-Jc5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FCT-6J-OYa" firstAttribute="leading" secondItem="iLI-Y3-NPc" secondAttribute="leadingMargin" constant="-16" id="0dn-qp-aPu"/>
+                            <constraint firstItem="FCT-6J-OYa" firstAttribute="centerY" secondItem="iLI-Y3-NPc" secondAttribute="centerY" constant="14" id="6pX-Dc-pmF"/>
+                            <constraint firstItem="L5v-7E-JxV" firstAttribute="leading" secondItem="FCT-6J-OYa" secondAttribute="leading" id="9UR-eY-hiZ"/>
+                            <constraint firstItem="JSM-xR-IPo" firstAttribute="centerX" secondItem="FCT-6J-OYa" secondAttribute="centerX" id="F6l-B2-AWo"/>
+                            <constraint firstItem="L5v-7E-JxV" firstAttribute="centerX" secondItem="FCT-6J-OYa" secondAttribute="centerX" id="KB4-fJ-CmA"/>
+                            <constraint firstItem="FCT-6J-OYa" firstAttribute="centerX" secondItem="iLI-Y3-NPc" secondAttribute="centerX" id="Lg1-wE-2lA"/>
+                            <constraint firstItem="L5v-7E-JxV" firstAttribute="bottom" secondItem="NbA-SH-dy2" secondAttribute="top" id="QBY-0r-1MG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FCT-6J-OYa" secondAttribute="trailing" constant="-16" id="gGU-Mz-dPT"/>
+                            <constraint firstItem="JSM-xR-IPo" firstAttribute="top" secondItem="pq3-4r-JPZ" secondAttribute="bottom" id="kps-k9-ioX"/>
+                            <constraint firstItem="JSM-xR-IPo" firstAttribute="leading" secondItem="iLI-Y3-NPc" secondAttribute="leading" id="sZN-Zv-6mw"/>
+                            <constraint firstItem="L5v-7E-JxV" firstAttribute="top" secondItem="FCT-6J-OYa" secondAttribute="bottom" id="uBB-VR-ADl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1132" y="-329.68515742128938"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LSJ-rV-JPq">
+            <objects>
+                <viewController id="OV0-Gi-lUn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WaG-C5-gvi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.4996756911277771" green="0.17516720294952393" blue="0.96565526723861694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Wj-NR-pGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="-131"/>
+        </scene>
+    </scenes>
 </document>

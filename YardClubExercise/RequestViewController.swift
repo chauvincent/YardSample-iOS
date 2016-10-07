@@ -11,8 +11,6 @@ import UIKit
 class RequestViewController: UIViewController
 {
 
-    @IBOutlet weak var menuTabBar: UITabBar!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -27,7 +25,6 @@ class RequestViewController: UIViewController
     func setupView()
     {
         self.view.backgroundColor = UIColor.red
-     
     }
 
     /*
