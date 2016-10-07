@@ -99,7 +99,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FCT-6J-OYa" firstAttribute="leading" secondItem="iLI-Y3-NPc" secondAttribute="leadingMargin" constant="-16" id="0dn-qp-aPu"/>
-                            <constraint firstItem="FCT-6J-OYa" firstAttribute="centerY" secondItem="iLI-Y3-NPc" secondAttribute="centerY" constant="14" id="6pX-Dc-pmF"/>
+                            <constraint firstItem="FCT-6J-OYa" firstAttribute="centerY" secondItem="iLI-Y3-NPc" secondAttribute="centerY" constant="100" id="6pX-Dc-pmF"/>
                             <constraint firstItem="L5v-7E-JxV" firstAttribute="leading" secondItem="FCT-6J-OYa" secondAttribute="leading" id="9UR-eY-hiZ"/>
                             <constraint firstItem="JSM-xR-IPo" firstAttribute="centerX" secondItem="FCT-6J-OYa" secondAttribute="centerX" id="F6l-B2-AWo"/>
                             <constraint firstItem="L5v-7E-JxV" firstAttribute="centerX" secondItem="FCT-6J-OYa" secondAttribute="centerX" id="KB4-fJ-CmA"/>
@@ -124,17 +124,30 @@
             <objects>
                 <viewController id="OV0-Gi-lUn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WaG-C5-gvi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="307"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="221"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-featured" translatesAutoresizingMaskIntoConstraints="NO" id="zry-Zs-Rk3"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mDp-F3-KsS"/>
+                        </subviews>
                         <color key="backgroundColor" red="0.4996756911277771" green="0.17516720294952393" blue="0.96565526723861694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zry-Zs-Rk3" firstAttribute="leading" secondItem="WaG-C5-gvi" secondAttribute="leading" id="2sR-ZZ-NcV"/>
+                            <constraint firstAttribute="trailing" secondItem="zry-Zs-Rk3" secondAttribute="trailing" id="3lJ-EZ-YR9"/>
+                            <constraint firstItem="zry-Zs-Rk3" firstAttribute="top" secondItem="WaG-C5-gvi" secondAttribute="top" id="I3t-iy-pyb"/>
+                            <constraint firstItem="mDp-F3-KsS" firstAttribute="centerX" secondItem="zry-Zs-Rk3" secondAttribute="centerX" id="NTP-qC-Yv9"/>
+                            <constraint firstItem="mDp-F3-KsS" firstAttribute="bottom" secondItem="zry-Zs-Rk3" secondAttribute="bottom" id="aKx-4r-3bX"/>
+                            <constraint firstAttribute="bottom" secondItem="zry-Zs-Rk3" secondAttribute="bottom" id="cnK-8e-237"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wj-NR-pGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-350" y="-184"/>
+            <point key="canvasLocation" x="-351.19999999999999" y="-184.85757121439281"/>
         </scene>
     </scenes>
     <resources>
+        <image name="img-featured" width="640" height="231"/>
         <image name="logo-cat" width="200" height="141"/>
         <image name="logo-yard-club" width="217" height="46"/>
     </resources>
