@@ -14,11 +14,12 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var equipmentTableView: UITableView!
 
     // MARK: - View Lifecycle
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         setupView()
-        
+        setupNav()
     }
 
     override func didReceiveMemoryWarning()
@@ -27,14 +28,21 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     // MARK: - View Setup
+    
     func setupView()
     {
         self.equipmentTableView.delegate = self
         self.equipmentTableView.dataSource = self
     }
 
+    func setupNav()
+    {
+        self.setupCallForNavigation()
+        self.navigationItem.title = "REQUEST EQUIPMENT"
+    }
 
     // MARK: - <UITableViewDelegate>
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         

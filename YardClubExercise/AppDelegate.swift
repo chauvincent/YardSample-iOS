@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         setupTabBar()
         setupNav()
   
-        // Set CustomTabBar as RootViewController
+        // Set CustomTabBar() as RootViewController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.tabBarController = CustomTabBar()
         self.window!.rootViewController = self.tabBarController
