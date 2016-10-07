@@ -30,6 +30,7 @@
 		7575E5051DA7EF9800F2F0DC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E5041DA7EF9800F2F0DC /* Result.swift */; };
 		7575E5091DA7F8C200F2F0DC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E5081DA7F8C200F2F0DC /* CustomView.swift */; };
 		7575E50B1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E50A1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift */; };
+		75CA2AB11DA822C20000C1E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75CA2AB01DA822C20000C1E4 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,22 +44,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7505411E1DA5B54900A94872 /* YardClubExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YardClubExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7505411E1DA5B54900A94872 /* YardRentals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YardRentals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		750541211DA5B54900A94872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		750541261DA5B54900A94872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		750541281DA5B54900A94872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7505412B1DA5B54900A94872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7505412D1DA5B54900A94872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		750541321DA5B54900A94872 /* YardClubExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YardClubExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		750541361DA5B54900A94872 /* YardClubExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YardClubExerciseTests.swift; sourceTree = "<group>"; };
-		750541381DA5B54900A94872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		750541321DA5B54900A94872 /* YardRentalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YardRentalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		750541361DA5B54900A94872 /* YardClubExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YardClubExerciseTests.swift; path = YardRentalsTests/YardClubExerciseTests.swift; sourceTree = "<group>"; };
+		750541381DA5B54900A94872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = YardRentals/Info.plist; sourceTree = "<group>"; };
 		750541411DA5B59400A94872 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveRentalViewController.swift; sourceTree = "<group>"; };
 		7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRequestViewController.swift; sourceTree = "<group>"; };
 		7575E4D91DA5E2C100F2F0DC /* MyYardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyYardViewController.swift; sourceTree = "<group>"; };
 		7575E4DF1DA6302000F2F0DC /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
-		7575E4E21DA6522D00F2F0DC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		7575E4E31DA6522D00F2F0DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		7575E4E21DA6522D00F2F0DC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		7575E4E31DA6522D00F2F0DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		7575E4EC1DA6739B00F2F0DC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7575E4EE1DA784BF00F2F0DC /* EquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentViewController.swift; sourceTree = "<group>"; };
 		7575E4F11DA78B0E00F2F0DC /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		7575E5041DA7EF9800F2F0DC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7575E5081DA7F8C200F2F0DC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		7575E50A1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		75CA2AB01DA822C20000C1E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,8 @@
 		750541151DA5B54800A94872 = {
 			isa = PBXGroup;
 			children = (
-				750541201DA5B54900A94872 /* YardClubExercise */,
+				75CA2AB01DA822C20000C1E4 /* Default-568h@2x.png */,
+				750541201DA5B54900A94872 /* YardRentals */,
 				7575E4E11DA6520A00F2F0DC /* Fonts */,
 				750541351DA5B54900A94872 /* YardClubExerciseTests */,
 				7505411F1DA5B54900A94872 /* Products */,
@@ -103,13 +106,13 @@
 		7505411F1DA5B54900A94872 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7505411E1DA5B54900A94872 /* YardClubExercise.app */,
-				750541321DA5B54900A94872 /* YardClubExerciseTests.xctest */,
+				7505411E1DA5B54900A94872 /* YardRentals.app */,
+				750541321DA5B54900A94872 /* YardRentalsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		750541201DA5B54900A94872 /* YardClubExercise */ = {
+		750541201DA5B54900A94872 /* YardRentals */ = {
 			isa = PBXGroup;
 			children = (
 				7575E4DE1DA5E2EF00F2F0DC /* App Global */,
@@ -122,7 +125,7 @@
 				750541281DA5B54900A94872 /* Assets.xcassets */,
 				7505412A1DA5B54900A94872 /* LaunchScreen.storyboard */,
 			);
-			path = YardClubExercise;
+			path = YardRentals;
 			sourceTree = "<group>";
 		};
 		750541351DA5B54900A94872 /* YardClubExerciseTests */ = {
@@ -181,7 +184,7 @@
 				7575E4E31DA6522D00F2F0DC /* OpenSans-Regular.ttf */,
 			);
 			name = Fonts;
-			path = YardClubExercise;
+			path = YardRentals/Fonts;
 			sourceTree = "<group>";
 		};
 		7575E4F01DA78AC900F2F0DC /* Data Service */ = {
@@ -239,9 +242,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7505411D1DA5B54800A94872 /* YardClubExercise */ = {
+		7505411D1DA5B54800A94872 /* YardRentals */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7505413B1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardClubExercise" */;
+			buildConfigurationList = 7505413B1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardRentals" */;
 			buildPhases = (
 				7505411A1DA5B54800A94872 /* Sources */,
 				7505411B1DA5B54800A94872 /* Frameworks */,
@@ -251,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = YardClubExercise;
+			name = YardRentals;
 			productName = YardClubExercise;
-			productReference = 7505411E1DA5B54900A94872 /* YardClubExercise.app */;
+			productReference = 7505411E1DA5B54900A94872 /* YardRentals.app */;
 			productType = "com.apple.product-type.application";
 		};
-		750541311DA5B54900A94872 /* YardClubExerciseTests */ = {
+		750541311DA5B54900A94872 /* YardRentalsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7505413E1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardClubExerciseTests" */;
+			buildConfigurationList = 7505413E1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardRentalsTests" */;
 			buildPhases = (
 				7505412E1DA5B54900A94872 /* Sources */,
 				7505412F1DA5B54900A94872 /* Frameworks */,
@@ -269,9 +272,9 @@
 			dependencies = (
 				750541341DA5B54900A94872 /* PBXTargetDependency */,
 			);
-			name = YardClubExerciseTests;
+			name = YardRentalsTests;
 			productName = YardClubExerciseTests;
-			productReference = 750541321DA5B54900A94872 /* YardClubExerciseTests.xctest */;
+			productReference = 750541321DA5B54900A94872 /* YardRentalsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -295,7 +298,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 750541191DA5B54800A94872 /* Build configuration list for PBXProject "YardClubExercise" */;
+			buildConfigurationList = 750541191DA5B54800A94872 /* Build configuration list for PBXProject "YardRentals" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -308,8 +311,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7505411D1DA5B54800A94872 /* YardClubExercise */,
-				750541311DA5B54900A94872 /* YardClubExerciseTests */,
+				7505411D1DA5B54800A94872 /* YardRentals */,
+				750541311DA5B54900A94872 /* YardRentalsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -324,6 +327,7 @@
 				750541291DA5B54900A94872 /* Assets.xcassets in Resources */,
 				7575E4E41DA6522D00F2F0DC /* OpenSans-Bold.ttf in Resources */,
 				750541271DA5B54900A94872 /* Main.storyboard in Resources */,
+				75CA2AB11DA822C20000C1E4 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +378,7 @@
 /* Begin PBXTargetDependency section */
 		750541341DA5B54900A94872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7505411D1DA5B54800A94872 /* YardClubExercise */;
+			target = 7505411D1DA5B54800A94872 /* YardRentals */;
 			targetProxy = 750541331DA5B54900A94872 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -494,9 +498,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = YardClubExercise/Info.plist;
+				INFOPLIST_FILE = YardRentals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardClubExercise";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardRentals";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -506,9 +510,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = YardClubExercise/Info.plist;
+				INFOPLIST_FILE = YardRentals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardClubExercise";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardRentals";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -524,7 +528,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardClubExerciseTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YardClubExercise.app/YardClubExercise";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YardRentals.app/YardRentals";
 			};
 			name = Debug;
 		};
@@ -538,14 +542,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Vincent-Chau.YardClubExerciseTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YardClubExercise.app/YardClubExercise";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YardRentals.app/YardRentals";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		750541191DA5B54800A94872 /* Build configuration list for PBXProject "YardClubExercise" */ = {
+		750541191DA5B54800A94872 /* Build configuration list for PBXProject "YardRentals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				750541391DA5B54900A94872 /* Debug */,
@@ -554,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7505413B1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardClubExercise" */ = {
+		7505413B1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardRentals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7505413C1DA5B54900A94872 /* Debug */,
@@ -563,7 +567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7505413E1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardClubExerciseTests" */ = {
+		7505413E1DA5B54900A94872 /* Build configuration list for PBXNativeTarget "YardRentalsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7505413F1DA5B54900A94872 /* Debug */,

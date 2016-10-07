@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7505411D1DA5B54800A94872"
-               BuildableName = "YardClubExercise.app"
-               BlueprintName = "YardClubExercise"
-               ReferencedContainer = "container:YardClubExercise.xcodeproj">
+               BuildableName = "YardRentals.app"
+               BlueprintName = "YardRentals"
+               ReferencedContainer = "container:YardRentals.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "750541311DA5B54900A94872"
-               BuildableName = "YardClubExerciseTests.xctest"
-               BlueprintName = "YardClubExerciseTests"
-               ReferencedContainer = "container:YardClubExercise.xcodeproj">
+               BuildableName = "YardRentalsTests.xctest"
+               BlueprintName = "YardRentalsTests"
+               ReferencedContainer = "container:YardRentals.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7505411D1DA5B54800A94872"
-            BuildableName = "YardClubExercise.app"
-            BlueprintName = "YardClubExercise"
-            ReferencedContainer = "container:YardClubExercise.xcodeproj">
+            BuildableName = "YardRentals.app"
+            BlueprintName = "YardRentals"
+            ReferencedContainer = "container:YardRentals.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7505411D1DA5B54800A94872"
-            BuildableName = "YardClubExercise.app"
-            BlueprintName = "YardClubExercise"
-            ReferencedContainer = "container:YardClubExercise.xcodeproj">
+            BuildableName = "YardRentals.app"
+            BlueprintName = "YardRentals"
+            ReferencedContainer = "container:YardRentals.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7505411D1DA5B54800A94872"
-            BuildableName = "YardClubExercise.app"
-            BlueprintName = "YardClubExercise"
-            ReferencedContainer = "container:YardClubExercise.xcodeproj">
+            BuildableName = "YardRentals.app"
+            BlueprintName = "YardRentals"
+            ReferencedContainer = "container:YardRentals.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

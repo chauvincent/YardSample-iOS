@@ -20,7 +20,6 @@
         <!--Request View Controller-->
         <scene sceneID="dmq-ck-cnU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h6M-kl-8eR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RequestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="naR-EU-WXk" customClass="RequestViewController" customModule="YardClubExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pq3-4r-JPZ"/>
@@ -243,6 +242,7 @@
                         <outlet property="yardClubLogo" destination="HjU-cj-4At" id="2oW-ue-QrG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6M-kl-8eR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1399" y="-185"/>
         </scene>
@@ -262,10 +262,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="NLh-Ip-XRR">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NLh-Ip-XRR" id="tuk-WH-dyb">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="1000" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -305,6 +305,10 @@
         <scene sceneID="LSJ-rV-JPq">
             <objects>
                 <viewController id="OV0-Gi-lUn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ixm-9z-geI"/>
+                        <viewControllerLayoutGuide type="bottom" id="HpW-g8-sfS"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WaG-C5-gvi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="221"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,7 +334,6 @@
         <!--Equipment Detail View Controller-->
         <scene sceneID="X0G-Yn-6FD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ije-ne-3XK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EquipmentDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Jb-EI-Xjj" customClass="EquipmentDetailViewController" customModule="YardClubExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="adc-wx-fb5"/>
@@ -344,10 +347,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SubCell" id="dcv-Kj-PaI">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dcv-Kj-PaI" id="I87-WN-icu">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="1000" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -379,6 +382,7 @@
                         <segue destination="Ic6-tS-iQ9" kind="show" identifier="DetailToResultSegue" id="hyb-14-ydS"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ije-ne-3XK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610" y="-924"/>
         </scene>
