@@ -53,11 +53,11 @@
                                     <segue destination="OV0-Gi-lUn" kind="embed" id="OBr-LE-1eZ"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2P-CN-mYg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2P-CN-mYg" customClass="CustomView" customModule="YardClubExercise" customModuleProvider="target">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-bY-8os">
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-IV-7vz">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-IV-7vz" customClass="CustomView" customModule="YardClubExercise" customModuleProvider="target">
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-cat" translatesAutoresizingMaskIntoConstraints="NO" id="vKF-Oa-lv5"/>
                                                 </subviews>
@@ -69,7 +69,7 @@
                                                     <constraint firstItem="vKF-Oa-lv5" firstAttribute="centerX" secondItem="eLk-IV-7vz" secondAttribute="centerX" constant="-2" id="vOu-ba-rLu"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjU-cj-4At">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjU-cj-4At" customClass="CustomView" customModule="YardClubExercise" customModuleProvider="target">
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-yard-club" translatesAutoresizingMaskIntoConstraints="NO" id="zlf-36-nBq"/>
                                                 </subviews>
@@ -218,11 +218,6 @@
                                     <constraint firstItem="hjx-Sf-faB" firstAttribute="baseline" secondItem="SZE-Nt-WUy" secondAttribute="baseline" id="xmH-hb-DU4"/>
                                     <constraint firstItem="hjx-Sf-faB" firstAttribute="firstBaseline" secondItem="SZE-Nt-WUy" secondAttribute="firstBaseline" id="yDW-BB-fFy"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <real key="value" value="0.20000000000000001"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -249,7 +244,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1150" y="-385"/>
+            <point key="canvasLocation" x="-1399" y="-185"/>
         </scene>
         <!--Equipment View Controller-->
         <scene sceneID="OlZ-wl-Gkt">
@@ -304,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUh-EJ-Ffn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="-707"/>
+            <point key="canvasLocation" x="-1399" y="-924"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LSJ-rV-JPq">
@@ -330,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wj-NR-pGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-351.19999999999999" y="-184.85757121439281"/>
+            <point key="canvasLocation" x="-609" y="16"/>
         </scene>
         <!--Equipment Detail View Controller-->
         <scene sceneID="X0G-Yn-6FD">
@@ -385,7 +380,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="903" y="-707"/>
+            <point key="canvasLocation" x="-610" y="-924"/>
         </scene>
         <!--Request Result View Controller-->
         <scene sceneID="mkt-qs-USh">
@@ -458,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Qv-0T-oKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="-707.49625187406298"/>
+            <point key="canvasLocation" x="186" y="-924"/>
         </scene>
     </scenes>
     <resources>

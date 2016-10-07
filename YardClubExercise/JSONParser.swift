@@ -10,7 +10,7 @@ import Foundation
 
 class JSONParser
 {
-    
+    /*   Parse JSON from Categories Data   */
     class func parseJSON(data: Data, completionHandler: @escaping (_ success: Bool,_ categoryTuples: [(id: Int, name: String)]? ) -> Void)
     {
         do {
@@ -36,8 +36,8 @@ class JSONParser
       completionHandler(false, nil)
     }
     
-    
-    class func parseSubCategoryJSON(data: Data, completionHandler: @escaping (_ success: Bool,_ categoryTuples: [SubCategory]? ) -> Void)
+     /*   Parse JSON from SubCategories Data   */
+    class func parseSubCategoryJSON(data: Data, completionHandler: @escaping (_ success: Bool,_ allSubCategories: [SubCategory]? ) -> Void)
     {
         do {
             var allSubCat: [SubCategory] = []
@@ -45,9 +45,7 @@ class JSONParser
             let jsonData = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: AnyObject]]
             for categoryDict in jsonData!
             {
-                print("printing dict")
-                print(categoryDict)
-                
+
                 guard let itemId = categoryDict["id"] as? Int
                     else { return  }
                 
@@ -72,4 +70,46 @@ class JSONParser
         completionHandler(false, nil)
     }
     
+     /*   Parse JSON from Results Data   */
+    class func parseResultJSON(data: Data, completionHandler: @escaping (_ success: Bool,_ allResults: [Result]?,_ allPhotos: [String]? ) -> Void)
+    {
+        do {
+            var allResults: [Result] = []
+            var imageUrls: [String] = []
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject]
+            
+            guard let resultsJSON = jsonData!["results"] as? [[String: AnyObject]]
+                else { return }
+            
+            for resultDict in resultsJSON
+            {
+                print(resultDict)
+                let result = Result(id: resultDict["id"] as! Int,
+                                    name: resultDict["name"] as! String,
+                                    descript: resultDict["description"] as! String,
+                                    daily: resultDict["daily_rate"] as! String,
+                                    weekly: resultDict["weekly_rate"] as! String,
+                                    monthly: resultDict["monthly_rate"] as! String,
+                                    operated: resultDict["operated_rates"] as! String)
+                allResults.append(result)
+            }
+            
+            guard let imageJSON = jsonData!["featured_photos"] as? [[String: AnyObject]]
+                else { return }
+            
+            for photoDict in imageJSON
+            {
+                let urlString = photoDict["url"]
+                imageUrls.append(urlString as! String)
+            }
+            
+            completionHandler(true, allResults, imageUrls)
+            
+        } catch {
+
+            print(error.localizedDescription)
+            completionHandler(false, nil, nil)
+        }
+    }
+
 }

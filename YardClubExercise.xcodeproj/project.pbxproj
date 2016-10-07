@@ -27,6 +27,8 @@
 		7575E4F91DA7D80700F2F0DC /* SubCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4F81DA7D80700F2F0DC /* SubCategory.swift */; };
 		7575E4FB1DA7DDB900F2F0DC /* EquipmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4FA1DA7DDB900F2F0DC /* EquipmentDetailViewController.swift */; };
 		7575E4FD1DA7E60100F2F0DC /* RequestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4FC1DA7E60100F2F0DC /* RequestResultViewController.swift */; };
+		7575E5051DA7EF9800F2F0DC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E5041DA7EF9800F2F0DC /* Result.swift */; };
+		7575E5091DA7F8C200F2F0DC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E5081DA7F8C200F2F0DC /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		7575E4F81DA7D80700F2F0DC /* SubCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategory.swift; sourceTree = "<group>"; };
 		7575E4FA1DA7DDB900F2F0DC /* EquipmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentDetailViewController.swift; sourceTree = "<group>"; };
 		7575E4FC1DA7E60100F2F0DC /* RequestResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResultViewController.swift; sourceTree = "<group>"; };
+		7575E5041DA7EF9800F2F0DC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7575E5081DA7F8C200F2F0DC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				7575E4DE1DA5E2EF00F2F0DC /* App Global */,
+				7575E4F31DA7A33400F2F0DC /* Class Extensions */,
 				7575E4F01DA78AC900F2F0DC /* Data Service */,
 				7575E4DB1DA5E2C900F2F0DC /* Model */,
 				7575E4DC1DA5E2D100F2F0DC /* View */,
-				7575E4DD1DA5E2DD00F2F0DC /* Controller */,
-				7575E4F31DA7A33400F2F0DC /* Extensions */,
+				7575E4DD1DA5E2DD00F2F0DC /* Controllers */,
 				750541251DA5B54900A94872 /* Main.storyboard */,
 				750541281DA5B54900A94872 /* Assets.xcassets */,
 				7505412A1DA5B54900A94872 /* LaunchScreen.storyboard */,
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				7575E4F81DA7D80700F2F0DC /* SubCategory.swift */,
+				7575E5041DA7EF9800F2F0DC /* Result.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -140,11 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				7575E4DF1DA6302000F2F0DC /* CustomTabBar.swift */,
+				7575E5081DA7F8C200F2F0DC /* CustomView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		7575E4DD1DA5E2DD00F2F0DC /* Controller */ = {
+		7575E4DD1DA5E2DD00F2F0DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7575E4FE1DA7EB0F00F2F0DC /* Request Equipment */,
@@ -152,7 +158,7 @@
 				7575E5001DA7EBA100F2F0DC /* Open Request */,
 				7575E5011DA7EBBA00F2F0DC /* My Yard */,
 			);
-			name = Controller;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		7575E4DE1DA5E2EF00F2F0DC /* App Global */ = {
@@ -184,12 +190,12 @@
 			name = "Data Service";
 			sourceTree = "<group>";
 		};
-		7575E4F31DA7A33400F2F0DC /* Extensions */ = {
+		7575E4F31DA7A33400F2F0DC /* Class Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				7575E4F41DA7A39A00F2F0DC /* UIViewController+Navigation.swift */,
 			);
-			name = Extensions;
+			name = "Class Extensions";
 			sourceTree = "<group>";
 		};
 		7575E4FE1DA7EB0F00F2F0DC /* Request Equipment */ = {
@@ -333,6 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7575E4F51DA7A39A00F2F0DC /* UIViewController+Navigation.swift in Sources */,
+				7575E5091DA7F8C200F2F0DC /* CustomView.swift in Sources */,
+				7575E5051DA7EF9800F2F0DC /* Result.swift in Sources */,
 				7575E4D81DA5E2B500F2F0DC /* OpenRequestViewController.swift in Sources */,
 				750541221DA5B54900A94872 /* AppDelegate.swift in Sources */,
 				7575E4F71DA7A6BF00F2F0DC /* JSONParser.swift in Sources */,
