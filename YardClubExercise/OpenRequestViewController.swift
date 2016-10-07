@@ -16,7 +16,7 @@ class OpenRequestViewController: UIViewController
         super.viewDidLoad()
         setupView()
     }
-
+ 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

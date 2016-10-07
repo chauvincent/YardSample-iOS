@@ -28,6 +28,6 @@ class MyYardViewController: UIViewController
         self.setupNavigationItems()
         self.setupBadgeForNavigation()
         self.navigationItem.title = "MY YARD"
-    }
+    } 
     
 }
