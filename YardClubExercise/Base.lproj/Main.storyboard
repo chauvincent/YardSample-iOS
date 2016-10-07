@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,9 @@
     <customFonts key="customFonts">
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
         </array>
     </customFonts>
     <scenes>
@@ -86,13 +90,133 @@
                                             <constraint firstItem="eLk-IV-7vz" firstAttribute="width" secondItem="HjU-cj-4At" secondAttribute="width" id="zXy-2B-rOp"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RENTAL STORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZE-Nt-WUy">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="3jg-DL-2WA"/>
+                                            <constraint firstAttribute="width" constant="105" id="WKk-JR-rGn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTRACTOR-OWNED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-Sf-faB">
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-check" translatesAutoresizingMaskIntoConstraints="NO" id="QnX-Ws-ezQ">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="E8Q-Xe-uEB"/>
+                                            <constraint firstAttribute="width" constant="10" id="JiN-wI-Byq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newest rental fleet in the industry" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTh-YZ-qf6">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="11a-UP-1hx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-check" translatesAutoresizingMaskIntoConstraints="NO" id="G3Z-0N-fwO">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="TZx-j9-2RV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited length of Rental" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7I-6T-PUO">
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-check" translatesAutoresizingMaskIntoConstraints="NO" id="IAo-p0-YOK">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="7k2-f9-hOm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick response time on availability" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQX-kQ-7e2">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="vek-T3-AAV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-check" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-8E-SqM">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="TmI-KT-SA9"/>
+                                            <constraint firstAttribute="height" constant="10" id="mCj-oY-vW9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fixed rental length" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeY-jM-rns">
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-check" translatesAutoresizingMaskIntoConstraints="NO" id="a1o-g8-s8A">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="p7t-KI-KAr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24-hr response time" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yW-OJ-QCK">
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn-check" translatesAutoresizingMaskIntoConstraints="NO" id="0Qr-yX-Z91">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="kke-bc-vAh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discounted Prices" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYS-Uj-S5i">
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XeY-jM-rns" secondAttribute="trailing" constant="49" id="0FZ-kq-xKg"/>
+                                    <constraint firstItem="8yW-OJ-QCK" firstAttribute="leading" secondItem="SYS-Uj-S5i" secondAttribute="leading" id="15g-PI-neu"/>
+                                    <constraint firstItem="0Qr-yX-Z91" firstAttribute="leading" secondItem="hjx-Sf-faB" secondAttribute="leading" id="48a-hP-iJi"/>
+                                    <constraint firstItem="oTh-YZ-qf6" firstAttribute="trailing" secondItem="UQX-kQ-7e2" secondAttribute="trailing" id="4XQ-Xo-RnN"/>
+                                    <constraint firstItem="SYS-Uj-S5i" firstAttribute="top" secondItem="8yW-OJ-QCK" secondAttribute="bottom" constant="2" id="5an-0a-rSu"/>
                                     <constraint firstItem="CLt-bY-8os" firstAttribute="centerX" secondItem="G2P-CN-mYg" secondAttribute="centerX" id="633-uE-RR9"/>
+                                    <constraint firstItem="oTh-YZ-qf6" firstAttribute="leading" secondItem="a7I-6T-PUO" secondAttribute="leading" id="6DK-vu-EuT"/>
+                                    <constraint firstItem="G3Z-0N-fwO" firstAttribute="leading" secondItem="IAo-p0-YOK" secondAttribute="leading" id="7He-mA-PiE"/>
+                                    <constraint firstItem="SZE-Nt-WUy" firstAttribute="leading" secondItem="CLt-bY-8os" secondAttribute="leading" id="Aqm-os-8Co"/>
                                     <constraint firstAttribute="trailing" secondItem="CLt-bY-8os" secondAttribute="trailing" constant="18" id="CO5-XR-Bur"/>
+                                    <constraint firstItem="IAo-p0-YOK" firstAttribute="top" secondItem="G3Z-0N-fwO" secondAttribute="bottom" constant="10" id="HRJ-Dz-PgN"/>
+                                    <constraint firstItem="QnX-Ws-ezQ" firstAttribute="top" secondItem="SZE-Nt-WUy" secondAttribute="bottom" constant="5" id="IDB-dm-3ly"/>
+                                    <constraint firstItem="fCB-8E-SqM" firstAttribute="centerY" secondItem="XeY-jM-rns" secondAttribute="centerY" id="IYW-LR-XM0"/>
+                                    <constraint firstItem="oTh-YZ-qf6" firstAttribute="leading" secondItem="QnX-Ws-ezQ" secondAttribute="trailing" constant="4" id="Ilx-pv-6L7"/>
+                                    <constraint firstItem="fCB-8E-SqM" firstAttribute="leading" secondItem="hjx-Sf-faB" secondAttribute="leading" id="KsJ-QE-74b"/>
+                                    <constraint firstItem="a1o-g8-s8A" firstAttribute="leading" secondItem="hjx-Sf-faB" secondAttribute="leading" id="LwG-qg-kS7"/>
+                                    <constraint firstItem="QnX-Ws-ezQ" firstAttribute="leading" secondItem="G3Z-0N-fwO" secondAttribute="leading" id="MIQ-lT-YlK"/>
+                                    <constraint firstItem="XeY-jM-rns" firstAttribute="leading" secondItem="8yW-OJ-QCK" secondAttribute="leading" id="QFV-FQ-8RZ"/>
                                     <constraint firstItem="CLt-bY-8os" firstAttribute="top" secondItem="G2P-CN-mYg" secondAttribute="top" constant="14" id="QP5-ej-Sal"/>
                                     <constraint firstItem="CLt-bY-8os" firstAttribute="leading" secondItem="G2P-CN-mYg" secondAttribute="leading" constant="17" id="S9b-HI-ejt"/>
+                                    <constraint firstItem="G3Z-0N-fwO" firstAttribute="trailing" secondItem="IAo-p0-YOK" secondAttribute="trailing" id="TAR-eW-LWM"/>
+                                    <constraint firstItem="QnX-Ws-ezQ" firstAttribute="trailing" secondItem="G3Z-0N-fwO" secondAttribute="trailing" id="Ugc-nr-7uT"/>
+                                    <constraint firstItem="XeY-jM-rns" firstAttribute="leading" secondItem="fCB-8E-SqM" secondAttribute="trailing" constant="4" id="WKQ-gK-QXM"/>
+                                    <constraint firstItem="a1o-g8-s8A" firstAttribute="centerY" secondItem="8yW-OJ-QCK" secondAttribute="centerY" id="Wzu-gN-hh8"/>
+                                    <constraint firstItem="G3Z-0N-fwO" firstAttribute="centerY" secondItem="a7I-6T-PUO" secondAttribute="centerY" id="XTQ-0x-G6t"/>
+                                    <constraint firstItem="G3Z-0N-fwO" firstAttribute="top" secondItem="QnX-Ws-ezQ" secondAttribute="bottom" constant="20" id="Yih-Hc-W7r"/>
+                                    <constraint firstItem="HjU-cj-4At" firstAttribute="leading" secondItem="hjx-Sf-faB" secondAttribute="leading" id="ZLU-yz-hCe"/>
+                                    <constraint firstItem="a1o-g8-s8A" firstAttribute="trailing" secondItem="0Qr-yX-Z91" secondAttribute="trailing" id="Zrr-QO-mPb"/>
+                                    <constraint firstItem="8yW-OJ-QCK" firstAttribute="top" secondItem="XeY-jM-rns" secondAttribute="bottom" constant="3" id="aZN-RF-CRz"/>
+                                    <constraint firstItem="fCB-8E-SqM" firstAttribute="trailing" secondItem="a1o-g8-s8A" secondAttribute="trailing" id="bY7-9G-S1a"/>
+                                    <constraint firstItem="UQX-kQ-7e2" firstAttribute="top" secondItem="a7I-6T-PUO" secondAttribute="bottom" constant="1" id="fBA-V8-Z9H"/>
+                                    <constraint firstItem="0Qr-yX-Z91" firstAttribute="centerY" secondItem="SYS-Uj-S5i" secondAttribute="centerY" id="fSx-Dl-meT"/>
+                                    <constraint firstItem="a7I-6T-PUO" firstAttribute="leading" secondItem="UQX-kQ-7e2" secondAttribute="leading" id="hoT-Z2-Lva"/>
+                                    <constraint firstItem="XeY-jM-rns" firstAttribute="trailing" secondItem="8yW-OJ-QCK" secondAttribute="trailing" id="jsK-Qb-Ydc"/>
+                                    <constraint firstItem="8yW-OJ-QCK" firstAttribute="trailing" secondItem="SYS-Uj-S5i" secondAttribute="trailing" id="ka5-pH-nDm"/>
+                                    <constraint firstItem="oTh-YZ-qf6" firstAttribute="top" secondItem="CLt-bY-8os" secondAttribute="bottom" constant="37" id="mrl-zc-jM0"/>
+                                    <constraint firstItem="SZE-Nt-WUy" firstAttribute="leading" secondItem="QnX-Ws-ezQ" secondAttribute="leading" id="otC-of-CNr"/>
+                                    <constraint firstItem="a7I-6T-PUO" firstAttribute="top" secondItem="oTh-YZ-qf6" secondAttribute="bottom" constant="2" id="sLI-DN-ecx"/>
+                                    <constraint firstItem="SZE-Nt-WUy" firstAttribute="top" secondItem="CLt-bY-8os" secondAttribute="bottom" constant="18" id="tnY-cL-Okk"/>
+                                    <constraint firstItem="fCB-8E-SqM" firstAttribute="top" secondItem="hjx-Sf-faB" secondAttribute="bottom" constant="1" id="wKZ-yz-7v7"/>
+                                    <constraint firstItem="hjx-Sf-faB" firstAttribute="baseline" secondItem="SZE-Nt-WUy" secondAttribute="baseline" id="xmH-hb-DU4"/>
+                                    <constraint firstItem="hjx-Sf-faB" firstAttribute="firstBaseline" secondItem="SZE-Nt-WUy" secondAttribute="firstBaseline" id="yDW-BB-fFy"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -147,6 +271,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icn-check" width="20" height="15"/>
         <image name="img-featured" width="640" height="231"/>
         <image name="logo-cat" width="200" height="141"/>
         <image name="logo-yard-club" width="217" height="46"/>
