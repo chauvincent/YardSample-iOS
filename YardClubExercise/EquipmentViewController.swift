@@ -14,6 +14,15 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var equipmentTableView: UITableView!
 
     // MARK: - View Lifecycle
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        APIManager.sharedInstance.GETCatalogJSON { (success) in
+            
+        }
+        
+    }
+    
     
     override func viewDidLoad()
     {
