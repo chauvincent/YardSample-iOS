@@ -13,6 +13,8 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var equipmentTableView: UITableView!
     
+    var selectedIndex: Int = 0
+    
     var categorys: [(Int, String)] = [] {
         didSet {
             self.equipmentTableView.reloadData()
@@ -24,6 +26,7 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    
         getCategories()
         setupView()
         setupNav()
@@ -32,6 +35,19 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
+    }
+    
+     // MARK: - Navigation
+     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "CategoryToSubSegue"
+        {
+            if let destViewController = segue.destination as? EquipmentDetailViewController
+            {
+                destViewController.selectedIndex = self.selectedIndex
+            }
+        }
     }
     
     // MARK: - View Setup
@@ -51,16 +67,20 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: - Data Services
     func getCategories()
     {
-        APIManager.sharedInstance.GETCatalogData { (success, data) in
+        let endpointURL = "http://yardclub.github.io/mobile-interview/api/catalog.json"
+        
+        APIManager.sharedInstance.GETCatalogData(url: endpointURL) { (success, data) in
             
             if (success)
             {
                 DispatchQueue.global(qos: .background).async { [weak self] () -> Void in
                         JSONParser.parseJSON(data: data!, completionHandler: { (success, allTuples) in
                             DispatchQueue.main.async { () -> Void in
+                                
                                 if (success)
                                 {
                                     self?.categorys = allTuples!
+                                    self?.equipmentTableView.reloadData()
                                 }
                             }
                         })
@@ -69,12 +89,15 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    
-    
     // MARK: - <UITableViewDelegate>
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        
+        let selectedId = self.categorys[indexPath.row].0 // Retreive id from tuple
+        self.selectedIndex = selectedId
+        
+        self.performSegue(withIdentifier: "CategoryToSubSegue", sender: nil)
         
     }
     
@@ -96,8 +119,10 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-        cell.textLabel?.text = self.categorys[indexPath.row].1
+        cell.textLabel?.text = self.categorys[indexPath.row].1 // Retreive category name from tuple
+        
         return cell
     }
     

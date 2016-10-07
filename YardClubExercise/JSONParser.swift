@@ -18,8 +18,6 @@ class JSONParser
             let jsonData = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: AnyObject]]
             for categoryDict in jsonData!
             {
-                print(categoryDict)
-                
                 guard let itemId = categoryDict["id"] as? Int
                     else { return  }
                 
@@ -36,9 +34,42 @@ class JSONParser
         }
         
       completionHandler(false, nil)
-        
     }
     
     
+    class func parseSubCategoryJSON(data: Data, completionHandler: @escaping (_ success: Bool,_ categoryTuples: [SubCategory]? ) -> Void)
+    {
+        do {
+            var allSubCat: [SubCategory] = []
+            
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: AnyObject]]
+            for categoryDict in jsonData!
+            {
+                print("printing dict")
+                print(categoryDict)
+                
+                guard let itemId = categoryDict["id"] as? Int
+                    else { return  }
+                
+                
+                guard let itemDetail = categoryDict["detail"] as? String
+                    else { return  }
+                
+                
+                guard let itemName = categoryDict["display_name"] as? String
+                    else { return }
+                
+                let newSubCat = SubCategory(id: itemId, display: itemName, detail: itemDetail)
+                allSubCat.append(newSubCat)
+            }
+            
+            completionHandler(true, allSubCat)
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        completionHandler(false, nil)
+    }
     
 }
