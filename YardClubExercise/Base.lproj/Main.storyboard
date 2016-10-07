@@ -394,7 +394,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D8 DOZER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0l-H2-oUG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RATES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0l-H2-oUG">
                                 <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="2Pz-2p-7qn"/>
@@ -406,9 +406,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBX-th-lhN">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="211" id="5Jh-dX-XbU"/>
+                                    <constraint firstAttribute="height" constant="299" id="5Jh-dX-XbU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Kl-OB-g9O">
@@ -427,7 +427,7 @@
                             <constraint firstItem="R0l-H2-oUG" firstAttribute="leading" secondItem="oBX-th-lhN" secondAttribute="leading" id="7d2-dq-c5X"/>
                             <constraint firstItem="R0l-H2-oUG" firstAttribute="trailing" secondItem="oBX-th-lhN" secondAttribute="trailing" id="Cnf-h9-HZz"/>
                             <constraint firstItem="R0l-H2-oUG" firstAttribute="top" secondItem="1EO-Fe-oQ5" secondAttribute="bottom" id="LTd-dk-hXe"/>
-                            <constraint firstItem="2Kl-OB-g9O" firstAttribute="top" secondItem="oBX-th-lhN" secondAttribute="bottom" id="Srm-vo-m0L"/>
+                            <constraint firstItem="2Kl-OB-g9O" firstAttribute="top" secondItem="oBX-th-lhN" secondAttribute="bottom" constant="-1" id="Srm-vo-m0L"/>
                             <constraint firstItem="oBX-th-lhN" firstAttribute="top" secondItem="R0l-H2-oUG" secondAttribute="bottom" constant="1" id="ZjX-Yi-njB"/>
                             <constraint firstItem="oBX-th-lhN" firstAttribute="leading" secondItem="2Kl-OB-g9O" secondAttribute="leading" id="bEH-iF-y03"/>
                             <constraint firstItem="R0l-H2-oUG" firstAttribute="leading" secondItem="KqA-5p-9Kn" secondAttribute="leading" id="cz2-bO-yqJ"/>

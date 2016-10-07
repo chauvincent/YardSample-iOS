@@ -65,6 +65,7 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     // MARK: - Data Services
+    
     func getCategories()
     {
         let endpointURL = "http://yardclub.github.io/mobile-interview/api/catalog.json"
@@ -74,7 +75,7 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
             if (success)
             {
                 DispatchQueue.global(qos: .background).async { [weak self] () -> Void in
-                        JSONParser.parseJSON(data: data!, completionHandler: { (success, allTuples) in
+                        JSONParser.parseCategoryJSON(data: data!, completionHandler: { (success, allTuples) in
                             DispatchQueue.main.async { () -> Void in
                                 
                                 if (success)

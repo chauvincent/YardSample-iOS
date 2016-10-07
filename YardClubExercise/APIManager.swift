@@ -12,7 +12,6 @@ class APIManager
 {
     static let sharedInstance = APIManager()
     
-    
     /*  Retreive Data Objects From Endpoint Image   */
     func GETData(url: String, completionHandler: @escaping (_ success: Bool, _ data: Data?) -> Void)
     {
@@ -48,13 +47,12 @@ class APIManager
                 }
             }
         }
-        
         task.resume()
 
     }
     
 
-    /*  Download Image   */
+    /*  Download Image Async */
     func downloadImage(_ imgUrl: String, completionHandler: @escaping (_ downloadedImage: UIImage) -> Void )
     {
         

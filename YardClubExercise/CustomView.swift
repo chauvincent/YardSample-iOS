@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CustomView: UIView {
+class CustomView: UIView
+{
 
     override func awakeFromNib()
     {

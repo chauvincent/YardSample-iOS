@@ -11,8 +11,9 @@ import Foundation
 class JSONParser
 {
     /*   Parse JSON from Categories Data   */
-    class func parseJSON(data: Data, completionHandler: @escaping (_ success: Bool,_ categoryTuples: [(id: Int, name: String)]? ) -> Void)
+    class func parseCategoryJSON(data: Data, completionHandler: @escaping (_ success: Bool,_ categoryTuples: [(id: Int, name: String)]? ) -> Void)
     {
+        
         do {
             var allTuples: [(Int, String)] = []
             let jsonData = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: AnyObject]]
@@ -39,6 +40,7 @@ class JSONParser
      /*   Parse JSON from SubCategories Data   */
     class func parseSubCategoryJSON(data: Data, completionHandler: @escaping (_ success: Bool,_ allSubCategories: [SubCategory]? ) -> Void)
     {
+        
         do {
             var allSubCat: [SubCategory] = []
             
@@ -49,10 +51,8 @@ class JSONParser
                 guard let itemId = categoryDict["id"] as? Int
                     else { return  }
                 
-                
                 guard let itemDetail = categoryDict["detail"] as? String
                     else { return  }
-                
                 
                 guard let itemName = categoryDict["display_name"] as? String
                     else { return }
@@ -83,7 +83,6 @@ class JSONParser
             
             for resultDict in resultsJSON
             {
-                print(resultDict)
                 let result = Result(id: resultDict["id"] as! Int,
                                     name: resultDict["name"] as! String,
                                     descript: resultDict["description"] as! String,

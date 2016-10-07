@@ -14,6 +14,8 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
     var allLabels: [UILabel] = []
     var allHairline: [UIView] = []
     
+    // MARK: - View Controller Life Cycle
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
         super.didReceiveMemoryWarning()
     }
 
-// MARK: - View Setup
+    // MARK: - View Setup
 
     func setupView()
     {
@@ -107,14 +109,14 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
         }
     }
     
-// MARK: - <UITabBarControllerDelegate>
+    // MARK: - <UITabBarControllerDelegate>
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController)
     {
         setSelectedMenu(index: self.selectedIndex)
     }
 
-// MARK: - Menu Helpers
+    // MARK: - Menu Helpers
     
     func setSelectedMenu(index: Int)
     {

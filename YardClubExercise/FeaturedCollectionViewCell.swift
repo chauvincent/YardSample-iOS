@@ -15,16 +15,30 @@ class FeaturedCollectionViewCell: UICollectionViewCell
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
+        
         return imageView
     }()
     
-    override init(frame: CGRect) {
+    // MARK: - init
+    
+    override init(frame: CGRect)
+    {
         super.init(frame: frame)
         setupViews()
     }
     
-    func setupViews() {
+    required init?(coder aDecoder: NSCoder)
+    {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - View Setup
+    
+    func setupViews()
+    {
         self.addSubview(featImageView)
+        
+        // Constraints for ImageView
         self.featImageView.leftAnchor .constraint(equalTo: self.leftAnchor).isActive = true
         self.featImageView.bottomAnchor .constraint(equalTo: self.bottomAnchor).isActive = true
         self.featImageView.rightAnchor .constraint(equalTo: self.rightAnchor).isActive = true
@@ -37,8 +51,5 @@ class FeaturedCollectionViewCell: UICollectionViewCell
             self.featImageView.image = image
         }
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }

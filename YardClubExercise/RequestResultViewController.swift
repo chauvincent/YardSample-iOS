@@ -12,10 +12,10 @@ class RequestResultViewController: UIViewController, UICollectionViewDataSource,
 {
     
     @IBOutlet weak var resultTextField: UITextView!
-    
     @IBOutlet weak var collectionView: UICollectionView!
 
     var imgUrls: [String] = [] {
+        
         didSet {
             print("did set image url")
             self.collectionView.reloadData()
@@ -23,31 +23,48 @@ class RequestResultViewController: UIViewController, UICollectionViewDataSource,
     }
     
     var results: [Result] = [] {
+        
         didSet {
             setupResultTextField()
         }
     }
 
+    // MARK: - View Controller Lifecycle
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
         setupView()
-        
         getResults()
-        
-
     }
+    
+    // MARK: - Setup View
     
     func setupView()
     {
         self.collectionView!.register(FeaturedCollectionViewCell.self, forCellWithReuseIdentifier: "FeatCell")
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        
+        self.navigationItem.title = "RESULTS"
+    }
+    
+    func setupResultTextField()
+    {
+        for item in results
+        {
+            var resultText: String?
+            resultText = self.resultTextField.text
+            
+            let itemCostString = "Name: \(item.name)\nDaily Rate: \(item.dailyRate) \nWeekly Rate: \(item.weeklyRate) \nOperated Rate:\(item.operatedRate)\n\n"
+            
+            resultText?.append(itemCostString)
+            self.resultTextField.text = resultText
+        }
     }
     
     // MARK: - Data Service
+    
     func getResults()
     {
         let resultEndpoint = "http://yardclub.github.io/mobile-interview/api/results.json"
@@ -73,22 +90,8 @@ class RequestResultViewController: UIViewController, UICollectionViewDataSource,
         }
     }
     
-    func setupResultTextField()
-    {
-        for item in results
-        {
-            var resultText: String?
-            resultText = self.resultTextField.text
-        
-            let itemCostString = "Name: \(item.name)\nDaily Rate: \(item.dailyRate) \nWeekly Rate: \(item.weeklyRate) \nOperated Rate:\(item.operatedRate)\n\n"
-            
-            resultText?.append(itemCostString)
-            self.resultTextField.text = resultText
-        }
-    }
-    
-    
     // MARK: - <UICollectionViewDelegate>
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int
     {
         return 1

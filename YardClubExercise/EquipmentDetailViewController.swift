@@ -29,6 +29,8 @@ class EquipmentDetailViewController: UIViewController, UITableViewDelegate, UITa
         
     }
     
+    // MARK: - View Controller Lifecycle
+    
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -39,6 +41,8 @@ class EquipmentDetailViewController: UIViewController, UITableViewDelegate, UITa
     {
         super.viewDidLoad()
     }
+    
+    // MARK: - Setup View
     
     func setupView()
     {
@@ -61,6 +65,7 @@ class EquipmentDetailViewController: UIViewController, UITableViewDelegate, UITa
                     JSONParser.parseSubCategoryJSON(data: data!, completionHandler: { (success, allSubCats) in
                         
                         DispatchQueue.main.async { () -> Void in
+                            
                             if (success)
                             {
                                 self?.allSubCategoryItems = allSubCats!

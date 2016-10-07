@@ -36,5 +36,4 @@ class SubCategory
         self._detail = detail
     }
     
-    
 }
