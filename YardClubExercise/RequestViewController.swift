@@ -10,6 +10,7 @@ import UIKit
 
 class RequestViewController: UIViewController
 {
+    @IBOutlet weak var yardClubLogo: UIView!
     
     override func viewDidLoad()
     {
@@ -22,10 +23,22 @@ class RequestViewController: UIViewController
         super.didReceiveMemoryWarning()
     }
 
+    // MARK: - Setup View
     func setupView()
     {
-        self.view.backgroundColor = UIColor.red
+        // Setup Yard Club Logo Button
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.yardClubLogoPressed(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        self.yardClubLogo.addGestureRecognizer(tapGesture)
     }
+    
+    
+    // MARK: - IBActions
+    func yardClubLogoPressed(_ sender: UITapGestureRecognizer)
+    {
+        self.performSegue(withIdentifier: "RequestToEquipmentSegue", sender: self)
+    }
+
 
     /*
     // MARK: - Navigation

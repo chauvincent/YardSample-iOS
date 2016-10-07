@@ -87,9 +87,10 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
     
     func setupControllers()
     {
+        // Register RequestVC from Storyboard
         let requestViewController: RequestViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RequestViewController") as! RequestViewController
         
-      //  let requestViewController = RequestViewController()
+        // Programatic VC's for now
         let activeRentalViewController = ActiveRentalViewController()
         let openRequestRentalViewController = OpenRequestViewController()
         let myYardViewController = MyYardViewController()
