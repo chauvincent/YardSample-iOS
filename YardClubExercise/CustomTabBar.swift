@@ -10,7 +10,6 @@ import UIKit
 
 class CustomTabBar: UITabBarController, UITabBarControllerDelegate
 {
-    var controllerTitles = ["REQUEST EQUIPMENT", "ACTIVE RENTAL", "OPEN REQUESTS", "MY YARD"]
     var tabBarTitles = ["REQUEST\nEQUIPMENT", "ACTIVE\nRENTAL", "OPEN\nREQUESTS", "MY YARD"]
     var allLabels: [UILabel] = []
     var allHairline: [UIView] = []
@@ -19,7 +18,6 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
     {
         super.viewDidLoad()
         setupView()
-        setupNavigationBar()
         setupControllers()
         setupMenuLabels()
         setSelectedMenu(index: 0) 
@@ -37,67 +35,25 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
         self.tabBar.backgroundColor = UIColor.black
         self.delegate = self
     }
-    
-    func setupNavigationBar()
-    {
-        // Setup Navigation BarButtonItems
-        let insetRightConst: CGFloat = 20.0
-        let buttonSize: CGFloat = 30.0
         
-        // Call Bar Button Item
-        let callBarButton = UIButton()
-        callBarButton.setImage(UIImage(named: "call")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        callBarButton.tintColor = YELLOW_COLOR
-        callBarButton.frame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
-        callBarButton.imageEdgeInsets = UIEdgeInsetsMake(0.0, insetRightConst, 0, 0)
-        
-        let rightBarButton = UIBarButtonItem()
-        rightBarButton.customView = callBarButton
-        self.navigationItem.rightBarButtonItem = rightBarButton
-        
-        // Setup Menu Bar Item
-        let insetLeftConst: CGFloat = -20.0
-        let menuBarButton = UIButton()
-        menuBarButton.setImage(UIImage(named: "menu_btn")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        menuBarButton.tintColor = YELLOW_COLOR
-        menuBarButton.frame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
-        menuBarButton.imageEdgeInsets = UIEdgeInsetsMake(0.0, insetLeftConst, 0, 0);
-        
-        let leftBarButtonItem = UIBarButtonItem()
-        leftBarButtonItem.customView = menuBarButton
-        self.navigationItem.leftBarButtonItem = leftBarButtonItem
-        
-        // Add Temporary Badge Next to Menu Bar Item
-        let tempBadge = UILabel()
-        tempBadge.clipsToBounds = true
-        tempBadge.layer.cornerRadius = 6.0
-        tempBadge.backgroundColor = YELLOW_COLOR
-        tempBadge.textColor = UIColor.black
-        tempBadge.text = " 15 ";
-        tempBadge.font = UIFont(name: "OpenSans-Bold", size: 11.0)!
-        tempBadge.sizeToFit()
-        tempBadge.translatesAutoresizingMaskIntoConstraints = false
-        leftBarButtonItem.customView?.addSubview(tempBadge);
-        
-        // Badge Constraints
-        let leftCustomView = self.navigationItem.leftBarButtonItem?.customView
-        tempBadge.leftAnchor .constraint(equalTo: leftCustomView!.rightAnchor, constant: insetLeftConst + 10.0).isActive = true
-        tempBadge.centerYAnchor .constraint(equalTo: leftCustomView!.centerYAnchor).isActive = true
-    }
-    
     func setupControllers()
     {
         // Register RequestVC from Storyboard
         let requestViewController: RequestViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RequestViewController") as! RequestViewController
+        let requestNav = UINavigationController(rootViewController: requestViewController)
         
-        // Programatic VC's for now
+        
+        // Placeholder VCs
         let activeRentalViewController = ActiveRentalViewController()
+        let activeRentalNav = UINavigationController(rootViewController: activeRentalViewController)
+        
         let openRequestRentalViewController = OpenRequestViewController()
+        let openReqNav = UINavigationController(rootViewController: openRequestRentalViewController)
+        
         let myYardViewController = MyYardViewController()
-    
-        self.viewControllers = [requestViewController, activeRentalViewController, openRequestRentalViewController, myYardViewController]
-    
-        navigationItem.title = "\(controllerTitles.first!)"
+        let myYardNav = UINavigationController(rootViewController: myYardViewController)
+        
+        self.viewControllers = [requestNav, activeRentalNav, openReqNav, myYardNav]
     }
     
     func setupMenuLabels()
@@ -169,7 +125,6 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate
             {
                 label.textColor = YELLOW_COLOR
                 self.allHairline[index].isHidden = false
-                navigationItem.title = "\(controllerTitles[index])"
             }
             else
             {

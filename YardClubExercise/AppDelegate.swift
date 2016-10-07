@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Set CustomTabBar as RootViewController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.tabBarController = CustomTabBar()
-        self.nav = UINavigationController(rootViewController: self.tabBarController!)
-        self.window!.rootViewController = self.nav
+        self.window!.rootViewController = self.tabBarController
         self.window?.makeKeyAndVisible()
         
         return true

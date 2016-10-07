@@ -25,6 +25,9 @@ class MyYardViewController: UIViewController
     func setupView()
     {
         self.view.backgroundColor = UIColor.green
+        self.setupNavigationItems()
+        self.setupBadgeForNavigation()
+        self.navigationItem.title = "MY YARD"
     }
     
 

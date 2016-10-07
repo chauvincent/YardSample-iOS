@@ -25,6 +25,9 @@ class OpenRequestViewController: UIViewController
     func setupView()
     {
         self.view.backgroundColor = UIColor.purple
+        self.setupNavigationItems()
+        self.setupBadgeForNavigation()
+        self.navigationItem.title = "OPEN REQUEST"
     }
     
     /*

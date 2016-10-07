@@ -25,6 +25,9 @@ class ActiveRentalViewController: UIViewController
     func setupView()
     {
         self.view.backgroundColor = UIColor.blue
+        self.setupNavigationItems()
+        self.setupBadgeForNavigation()
+        self.navigationItem.title = "ACTIVE RENTALS"
     }
     
 

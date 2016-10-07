@@ -12,10 +12,12 @@ class RequestViewController: UIViewController
 {
     @IBOutlet weak var yardClubLogo: UIView!
     
+    // MARK: - View Lifecycle
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.setupView()
+        self.setupNavigationBar()
     }
 
     override func didReceiveMemoryWarning()
@@ -26,17 +28,25 @@ class RequestViewController: UIViewController
     // MARK: - Setup View
     func setupView()
     {
-        // Setup Yard Club Logo Button
+        // Add Action to YardClub Logo
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.yardClubLogoPressed(_:)))
         tapGesture.numberOfTapsRequired = 1
         self.yardClubLogo.addGestureRecognizer(tapGesture)
+        self.navigationItem.title = "REQUEST EQUIPMENT"
     }
     
+    func setupNavigationBar()
+    {
+        self.setupNavigationItems()
+        self.setupBadgeForNavigation()
+    }
     
     // MARK: - IBActions
     func yardClubLogoPressed(_ sender: UITapGestureRecognizer)
     {
-        self.performSegue(withIdentifier: "RequestToEquipmentSegue", sender: self)
+        // Push to EquipmentVC
+        let equipmentViewController: EquipmentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EquipmentViewController") as! EquipmentViewController
+        self.navigationController?.pushViewController(equipmentViewController, animated: false)
     }
 
 

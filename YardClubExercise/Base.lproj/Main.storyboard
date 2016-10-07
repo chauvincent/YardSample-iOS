@@ -256,16 +256,15 @@
                     </view>
                     <connections>
                         <outlet property="yardClubLogo" destination="HjU-cj-4At" id="2oW-ue-QrG"/>
-                        <segue destination="L4U-jE-a8p" kind="show" identifier="RequestToEquipmentSegue" id="MAO-03-kag"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-1150" y="-385"/>
         </scene>
-        <!--View Controller-->
+        <!--Equipment View Controller-->
         <scene sceneID="OlZ-wl-Gkt">
             <objects>
-                <viewController id="L4U-jE-a8p" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EquipmentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L4U-jE-a8p" customClass="EquipmentViewController" customModule="YardClubExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kT6-iI-gBA"/>
                         <viewControllerLayoutGuide type="bottom" id="lRw-ab-MNs"/>
@@ -277,7 +276,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-AT-So2">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NLh-Ip-XRR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="NLh-Ip-XRR">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NLh-Ip-XRR" id="tuk-WH-dyb">
@@ -287,7 +286,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  CHOOSE A RENTAL STORE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQ2-aT-of3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT KIND OF EQUIPMENT ARE YOU LOOKING FOR?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQ2-aT-of3">
                                 <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="1P9-zg-zNY"/>
@@ -299,7 +298,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hWq-AT-So2" firstAttribute="top" secondItem="yQ2-aT-of3" secondAttribute="bottom" constant="8" symbolic="YES" id="Bav-5V-y4J"/>
+                            <constraint firstItem="hWq-AT-So2" firstAttribute="top" secondItem="yQ2-aT-of3" secondAttribute="bottom" constant="-60" id="Bav-5V-y4J"/>
                             <constraint firstItem="yQ2-aT-of3" firstAttribute="leading" secondItem="w67-jZ-NKH" secondAttribute="leading" id="PRS-rS-uYm"/>
                             <constraint firstItem="yQ2-aT-of3" firstAttribute="centerX" secondItem="hWq-AT-So2" secondAttribute="centerX" id="RZ0-7Z-DIU"/>
                             <constraint firstItem="yQ2-aT-of3" firstAttribute="top" secondItem="kT6-iI-gBA" secondAttribute="bottom" id="SDg-VB-Y6i"/>
@@ -308,6 +307,9 @@
                             <constraint firstAttribute="trailing" secondItem="hWq-AT-So2" secondAttribute="trailing" id="vwZ-Nv-AJL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="equipmentTableView" destination="hWq-AT-So2" id="D4t-5o-PCw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUh-EJ-Ffn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

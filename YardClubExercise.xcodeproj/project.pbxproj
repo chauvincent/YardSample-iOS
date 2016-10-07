@@ -20,6 +20,9 @@
 		7575E4E41DA6522D00F2F0DC /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7575E4E21DA6522D00F2F0DC /* OpenSans-Bold.ttf */; };
 		7575E4E51DA6522D00F2F0DC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7575E4E31DA6522D00F2F0DC /* OpenSans-Regular.ttf */; };
 		7575E4ED1DA6739B00F2F0DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4EC1DA6739B00F2F0DC /* Constants.swift */; };
+		7575E4EF1DA784BF00F2F0DC /* EquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4EE1DA784BF00F2F0DC /* EquipmentViewController.swift */; };
+		7575E4F21DA78B0E00F2F0DC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4F11DA78B0E00F2F0DC /* APIManager.swift */; };
+		7575E4F51DA7A39A00F2F0DC /* UIViewController+CustomNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4F41DA7A39A00F2F0DC /* UIViewController+CustomNav.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		7575E4E21DA6522D00F2F0DC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		7575E4E31DA6522D00F2F0DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		7575E4EC1DA6739B00F2F0DC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7575E4EE1DA784BF00F2F0DC /* EquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentViewController.swift; sourceTree = "<group>"; };
+		7575E4F11DA78B0E00F2F0DC /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		7575E4F41DA7A39A00F2F0DC /* UIViewController+CustomNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+CustomNav.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				7575E4DE1DA5E2EF00F2F0DC /* App Global */,
+				7575E4F01DA78AC900F2F0DC /* Data Service */,
 				7575E4DB1DA5E2C900F2F0DC /* Model */,
 				7575E4DC1DA5E2D100F2F0DC /* View */,
+				7575E4F31DA7A33400F2F0DC /* Extensions */,
 				7575E4DD1DA5E2DD00F2F0DC /* Controller */,
 				750541251DA5B54900A94872 /* Main.storyboard */,
 				750541281DA5B54900A94872 /* Assets.xcassets */,
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				750541411DA5B59400A94872 /* RequestViewController.swift */,
+				7575E4EE1DA784BF00F2F0DC /* EquipmentViewController.swift */,
 				750541431DA5C2BB00A94872 /* ActiveRentalViewController.swift */,
 				7575E4D71DA5E2B500F2F0DC /* OpenRequestViewController.swift */,
 				7575E4D91DA5E2C100F2F0DC /* MyYardViewController.swift */,
@@ -142,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				750541211DA5B54900A94872 /* AppDelegate.swift */,
-				7505412D1DA5B54900A94872 /* Info.plist */,
 				7575E4EC1DA6739B00F2F0DC /* Constants.swift */,
+				7505412D1DA5B54900A94872 /* Info.plist */,
 			);
 			name = "App Global";
 			sourceTree = "<group>";
@@ -156,6 +165,22 @@
 			);
 			name = Fonts;
 			path = YardClubExercise;
+			sourceTree = "<group>";
+		};
+		7575E4F01DA78AC900F2F0DC /* Data Service */ = {
+			isa = PBXGroup;
+			children = (
+				7575E4F11DA78B0E00F2F0DC /* APIManager.swift */,
+			);
+			name = "Data Service";
+			sourceTree = "<group>";
+		};
+		7575E4F31DA7A33400F2F0DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7575E4F41DA7A39A00F2F0DC /* UIViewController+CustomNav.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,13 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7575E4F51DA7A39A00F2F0DC /* UIViewController+CustomNav.swift in Sources */,
 				7575E4D81DA5E2B500F2F0DC /* OpenRequestViewController.swift in Sources */,
 				750541221DA5B54900A94872 /* AppDelegate.swift in Sources */,
 				7575E4E01DA6302000F2F0DC /* CustomTabBar.swift in Sources */,
+				7575E4F21DA78B0E00F2F0DC /* APIManager.swift in Sources */,
 				750541421DA5B59400A94872 /* RequestViewController.swift in Sources */,
 				7575E4ED1DA6739B00F2F0DC /* Constants.swift in Sources */,
 				7575E4DA1DA5E2C100F2F0DC /* MyYardViewController.swift in Sources */,
 				750541441DA5C2BB00A94872 /* ActiveRentalViewController.swift in Sources */,
+				7575E4EF1DA784BF00F2F0DC /* EquipmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
