@@ -68,11 +68,6 @@
                                                     <constraint firstItem="vKF-Oa-lv5" firstAttribute="centerY" secondItem="eLk-IV-7vz" secondAttribute="centerY" constant="-1" id="cQS-8s-2Pd"/>
                                                     <constraint firstItem="vKF-Oa-lv5" firstAttribute="centerX" secondItem="eLk-IV-7vz" secondAttribute="centerX" constant="-2" id="vOu-ba-rLu"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <real key="value" value="0.29999999999999999"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjU-cj-4At">
                                                 <subviews>
@@ -87,11 +82,6 @@
                                                     <constraint firstItem="zlf-36-nBq" firstAttribute="leading" secondItem="HjU-cj-4At" secondAttribute="leading" constant="25" id="eia-hG-XRN"/>
                                                     <constraint firstAttribute="height" constant="103" id="rkb-d2-pgp"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <real key="value" value="0.29999999999999999"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <constraints>

@@ -12,21 +12,19 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
 {
     
     @IBOutlet weak var equipmentTableView: UITableView!
+    
+    var categorys: [(Int, String)] = [] {
+        didSet {
+            self.equipmentTableView.reloadData()
+        }
+    }
 
     // MARK: - View Lifecycle
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-        APIManager.sharedInstance.GETCatalogJSON { (success) in
-            
-        }
-        
-    }
-    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        getCategories()
         setupView()
         setupNav()
     }
@@ -50,6 +48,29 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationItem.title = "REQUEST EQUIPMENT"
     }
 
+    // MARK: - Data Services
+    func getCategories()
+    {
+        APIManager.sharedInstance.GETCatalogData { (success, data) in
+            
+            if (success)
+            {
+                DispatchQueue.global(qos: .background).async { [weak self] () -> Void in
+                        JSONParser.parseJSON(data: data!, completionHandler: { (success, allTuples) in
+                            DispatchQueue.main.async { () -> Void in
+                                if (success)
+                                {
+                                    self?.categorys = allTuples!
+                                }
+                            }
+                        })
+                }
+            }
+        }
+    }
+    
+    
+    
     // MARK: - <UITableViewDelegate>
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
@@ -59,7 +80,7 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 5
+        return self.categorys.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
@@ -76,7 +97,7 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-        cell.textLabel?.text = "TESTING"
+        cell.textLabel?.text = self.categorys[indexPath.row].1
         return cell
     }
     

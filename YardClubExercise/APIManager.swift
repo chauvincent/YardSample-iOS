@@ -12,9 +12,10 @@ class APIManager
 {
     static let sharedInstance = APIManager()
     
-    func GETCatalogJSON(completionHandler: @escaping (_ success: Bool) -> Void)
+    func GETCatalogData(completionHandler: @escaping (_ success: Bool, _ data: Data?) -> Void)
     {
         guard let endpointURL = NSURL(string: "http://yardclub.github.io/mobile-interview/api/catalog.json") else {  return  }
+        
         var request = URLRequest(url: endpointURL as URL)
         request.httpMethod = "GET"
         
@@ -23,7 +24,7 @@ class APIManager
             if (error != nil)
             {
                 print(error?.localizedDescription)
-                completionHandler(false)
+                completionHandler(false, nil)
             }
             
             if let httpResponse = response as? HTTPURLResponse
@@ -33,12 +34,14 @@ class APIManager
                 
                 if (valid)
                 {
-                
+                    DispatchQueue.main.async(execute: {
+                        completionHandler(true, data!)
+                    })
                 }
                 else
                 {
                     DispatchQueue.main.async(execute: {
-                            completionHandler(false)
+                        completionHandler(false, nil)
                     })
                 }
             }
@@ -49,7 +52,7 @@ class APIManager
     }
     
     
-    func GETSubcategory(completionHandler: @escaping (_ success: Bool) -> Void)
+    func GETSubcategoryData(completionHandler: @escaping (_ success: Bool) -> Void)
     {
         
     }

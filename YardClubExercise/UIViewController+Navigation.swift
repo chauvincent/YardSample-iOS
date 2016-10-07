@@ -88,6 +88,7 @@ extension UIViewController
     
     
     // MARK: - Bar Button Selectors
+    
     func callBarButtonPressed(_ sender: UITapGestureRecognizer)
     {
         print("called in extension, override in vc if needed or modify here")

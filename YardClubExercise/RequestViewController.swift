@@ -44,7 +44,7 @@ class RequestViewController: UIViewController
     {
         // Push to EquipmentVC
         let equipmentViewController: EquipmentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EquipmentViewController") as! EquipmentViewController
-        self.navigationController?.pushViewController(equipmentViewController, animated: false)
+        self.navigationController?.pushViewController(equipmentViewController, animated: true)
     }    
     
 }
