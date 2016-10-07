@@ -17,13 +17,14 @@ class RequestResultViewController: UIViewController, UICollectionViewDataSource,
 
     var imgUrls: [String] = [] {
         didSet {
-            
+            print("did set image url")
+            self.collectionView.reloadData()
         }
     }
     
     var results: [Result] = [] {
         didSet {
-            
+            setupResultTextField()
         }
     }
 
@@ -31,19 +32,26 @@ class RequestResultViewController: UIViewController, UICollectionViewDataSource,
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
+        setupView()
         
         getResults()
         
-        
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ResultCell")
 
+    }
+    
+    func setupView()
+    {
+        self.collectionView!.register(FeaturedCollectionViewCell.self, forCellWithReuseIdentifier: "FeatCell")
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
     }
     
     // MARK: - Data Service
     func getResults()
     {
         let resultEndpoint = "http://yardclub.github.io/mobile-interview/api/results.json"
-        APIManager.sharedInstance.GETCatalogData(url: resultEndpoint) { (success, data) in
+        APIManager.sharedInstance.GETData(url: resultEndpoint) { (success, data) in
             
             if (success)
             {
@@ -65,24 +73,48 @@ class RequestResultViewController: UIViewController, UICollectionViewDataSource,
         }
     }
     
+    func setupResultTextField()
+    {
+        for item in results
+        {
+            var resultText: String?
+            resultText = self.resultTextField.text
+        
+            let itemCostString = "Name: \(item.name)\nDaily Rate: \(item.dailyRate) \nWeekly Rate: \(item.weeklyRate) \nOperated Rate:\(item.operatedRate)\n\n"
+            
+            resultText?.append(itemCostString)
+            self.resultTextField.text = resultText
+        }
+    }
+    
+    
     // MARK: - <UICollectionViewDelegate>
     func numberOfSections(in collectionView: UICollectionView) -> Int
     {
-        return 0
+        return 1
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-     
-        return 0
+        return self.imgUrls.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ResultCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatCell", for: indexPath) as! FeaturedCollectionViewCell
+        cell.setImage(url: self.imgUrls[indexPath.row])
         
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+    
+        var size = self.collectionView.frame.size
+        size.width = (size.width / 2.0)
+        size.height = (size.height / 2.0)
+        
+        return size
+    }
 }

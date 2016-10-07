@@ -29,6 +29,7 @@
 		7575E4FD1DA7E60100F2F0DC /* RequestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E4FC1DA7E60100F2F0DC /* RequestResultViewController.swift */; };
 		7575E5051DA7EF9800F2F0DC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E5041DA7EF9800F2F0DC /* Result.swift */; };
 		7575E5091DA7F8C200F2F0DC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E5081DA7F8C200F2F0DC /* CustomView.swift */; };
+		7575E50B1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E50A1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		7575E4FC1DA7E60100F2F0DC /* RequestResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestResultViewController.swift; sourceTree = "<group>"; };
 		7575E5041DA7EF9800F2F0DC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7575E5081DA7F8C200F2F0DC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		7575E50A1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				7575E4DF1DA6302000F2F0DC /* CustomTabBar.swift */,
 				7575E5081DA7F8C200F2F0DC /* CustomView.swift */,
+				7575E50A1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				7575E4E01DA6302000F2F0DC /* CustomTabBar.swift in Sources */,
 				7575E4F21DA78B0E00F2F0DC /* APIManager.swift in Sources */,
 				750541421DA5B59400A94872 /* RequestViewController.swift in Sources */,
+				7575E50B1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift in Sources */,
 				7575E4ED1DA6739B00F2F0DC /* Constants.swift in Sources */,
 				7575E4F91DA7D80700F2F0DC /* SubCategory.swift in Sources */,
 				7575E4FD1DA7E60100F2F0DC /* RequestResultViewController.swift in Sources */,

@@ -53,7 +53,7 @@ class EquipmentDetailViewController: UIViewController, UITableViewDelegate, UITa
     func getSubCategories(id: Int)
     {
         let endpointURL = "http://yardclub.github.io/mobile-interview/api/catalog/" + String(id) + ".json"
-        APIManager.sharedInstance.GETCatalogData(url: endpointURL) { (success, data) in
+        APIManager.sharedInstance.GETData(url: endpointURL) { (success, data) in
             
             if (success)
             {
