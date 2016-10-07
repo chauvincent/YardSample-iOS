@@ -69,7 +69,7 @@ class EquipmentViewController: UIViewController, UITableViewDelegate, UITableVie
     {
         let endpointURL = "http://yardclub.github.io/mobile-interview/api/catalog.json"
         
-        APIManager.sharedInstance.GETCatalogData(url: endpointURL) { (success, data) in
+        APIManager.sharedInstance.GETData(url: endpointURL) { (success, data) in
             
             if (success)
             {

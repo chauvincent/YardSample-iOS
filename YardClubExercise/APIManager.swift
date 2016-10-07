@@ -6,13 +6,15 @@
 //  Copyright © 2016 Vincent Chau. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class APIManager
 {
     static let sharedInstance = APIManager()
     
-    func GETCatalogData(url: String, completionHandler: @escaping (_ success: Bool, _ data: Data?) -> Void)
+    
+    /*  Retreive Data Objects From Endpoint Image   */
+    func GETData(url: String, completionHandler: @escaping (_ success: Bool, _ data: Data?) -> Void)
     {
         guard let endpointURL = NSURL(string: url) else {  return  }
         
@@ -51,7 +53,29 @@ class APIManager
 
     }
     
+
+    /*  Download Image   */
+    func downloadImage(_ imgUrl: String, completionHandler: @escaping (_ downloadedImage: UIImage) -> Void )
+    {
+        
+        DispatchQueue.global(qos: .background).async { [weak self] () -> Void in
+            
+            let url : NSURL? = NSURL(string: imgUrl)
+            self?.getDataFromUrl(url: url as! URL) { (data, response, error)  in
+            
+                DispatchQueue.main.sync() { () -> Void in
+                    guard let data = data, error == nil else { return }
+                    completionHandler(UIImage(data: data)!)
+                }
+            }
+        }
+    }
     
-    
-    
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
+        
 }
