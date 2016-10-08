@@ -30,7 +30,6 @@
 		7575E5051DA7EF9800F2F0DC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E5041DA7EF9800F2F0DC /* Result.swift */; };
 		7575E5091DA7F8C200F2F0DC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E5081DA7F8C200F2F0DC /* CustomView.swift */; };
 		7575E50B1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575E50A1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift */; };
-		75CA2AB11DA822C20000C1E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75CA2AB01DA822C20000C1E4 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +70,6 @@
 		7575E5041DA7EF9800F2F0DC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7575E5081DA7F8C200F2F0DC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		7575E50A1DA7FECF00F2F0DC /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
-		75CA2AB01DA822C20000C1E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 		750541151DA5B54800A94872 = {
 			isa = PBXGroup;
 			children = (
-				75CA2AB01DA822C20000C1E4 /* Default-568h@2x.png */,
 				750541201DA5B54900A94872 /* YardRentals */,
 				7575E4E11DA6520A00F2F0DC /* Fonts */,
 				750541351DA5B54900A94872 /* YardClubExerciseTests */,
@@ -327,7 +324,6 @@
 				750541291DA5B54900A94872 /* Assets.xcassets in Resources */,
 				7575E4E41DA6522D00F2F0DC /* OpenSans-Bold.ttf in Resources */,
 				750541271DA5B54900A94872 /* Main.storyboard in Resources */,
-				75CA2AB11DA822C20000C1E4 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

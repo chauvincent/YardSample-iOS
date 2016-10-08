@@ -17,7 +17,7 @@ class RequestResultViewController: UIViewController, UICollectionViewDataSource,
     var imgUrls: [String] = [] {
         
         didSet {
-            print("did set image url")
+
             self.collectionView.reloadData()
         }
     }
