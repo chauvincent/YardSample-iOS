@@ -1,4 +1,4 @@
-rdRental-iOS
+YardRental-iOS
 ===================
 ----------
 About
